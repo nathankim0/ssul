@@ -1,5 +1,21 @@
 # Changelog
 
+## v1.3.0 (2026-11-06)
+
+Covers the gaps found when auditing ssul against all 16 source repositories.
+
+### Added
+- Modes: reply (replies and quote posts), analyze (pasted viral posts), repurpose (blog, video, README into posts), thread (multi-post threads), plan (a week of ideas tied to real material), profile (bio and pinned post), video (Reels, Shorts, TikTok script, on-screen text, caption).
+- Sponsorship and AI disclosure by Korean FTC rules: placement in the first part, approved and banned wording, hashtags, photos, video, AI-generated people (`references/disclosure.md`).
+- Meaning-safe polishing (negation, conditions, limits, numbers) and a proofreading pass that keeps intentional casual style (`references/polish.md`).
+- Voice profile and story bank saved to `~/.ssul/` with the user's consent (`references/voice-bank.md`).
+- First-comment links and posting guidance without unverified posting-time claims (`references/threads.md`).
+- Step 0 (load voice and story bank) and passes 8 and 9 (disclosure; meaning and spelling).
+- Conflicts 17 to 22.
+
+### Changed
+- README credits now list the skills studied and what ssul actually took from each.
+
 ## v1.2.0 (2026-11-06)
 
 ### Added

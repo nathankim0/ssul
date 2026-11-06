@@ -33,7 +33,7 @@ Useful endings, mixed naturally:
 
 Spoken connectors: 근데, 그래서, 그러니까, 아니, 결국, 막상. Report connectors are banned in posts: 따라서, 그러나, 또한, 나아가, 종합하면, 결론적으로.
 
-Report words to replace: 부각 → 눈에 띄다, 안착 → 자리 잡다, 소진 → 다 떨어지다, 분기점 → 갈림길, 괴리 → 차이, 촉발 → 시작되다, 진행하다 → just the verb, 공유드리다 → 보내다 / 말하다.
+Report words to replace: 부각 -> 눈에 띄다, 안착 -> 자리 잡다, 소진 -> 다 떨어지다, 분기점 -> 갈림길, 괴리 -> 차이, 촉발 -> 시작되다, 진행하다 -> just the verb, 공유드리다 -> 보내다 / 말하다.
 
 Do not stack the same ending 4 times in a row. Do not vary endings just to vary them.
 
@@ -53,6 +53,10 @@ Fix every hit. Severity: **S1** always fix, **S2** fix unless it is the user's o
 | S2 | 번역투 | 당신, ~하는 것은 중요합니다, ~에 있어서 | rewrite as speech |
 | S2 | Stacked adjectives | 빠르고 신속하며 효율적인 | one fact instead |
 | S2 | Significance words | 핵심적인, 혁신적인, 게임체인저 | delete or replace with the fact |
+| S2 | Middle dot `·` between words | 기획·개발·운영, 중·하순 | a comma, 와/랑, or spell it out (중순에서 하순) |
+| S2 | Circled numbers | ①②③ | `1.` `2.` `3.` or no numbering |
+| S2 | Unicode arrows | → ⇒ ➡ | `->`, or words (그래서, 다음에) |
+| S2 | Emoji | ✅ 🔥 👉 📌 | none |
 | S3 | Em dash, en dash | — | period or comma |
 | S3 | Curly quotes or single quotes for emphasis | '진짜' | remove the quotes |
 | S3 | Bold, headers, bullets in a casual post | | plain lines |

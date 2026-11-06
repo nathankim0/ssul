@@ -2,7 +2,7 @@
 
 Pick by what the material has: an event with a turn (Scene, Confession), usable facts (Finding, List), or an attitude (Hot take, One-liner).
 
-## Scene (장면) · likes
+## Scene (장면) (likes)
 First line drops the reader into the moment. Two to four beats joined by 근데 or 그래서. Ends on a quote, an image, or a small punchline.
 
 Placeholders in `[brackets]` must be replaced with real details before posting.
@@ -19,7 +19,7 @@ Placeholders in `[brackets]` must be replaced with real details before posting.
 > [아빠]는 "[그래도 뽑아놓길 잘했지]" 하시는데
 > 내년에도 똑같이 하실 거 알잖아요 ㅋㅋ
 
-## Confession (고백) · replies
+## Confession (고백) (replies)
 One true thing, including the unflattering part. The reader replies because they did it too.
 
 > 클로드 설정 파일에 이렇게 적어놨어요
@@ -31,22 +31,22 @@ One true thing, including the unflattering part. The reader replies because they
 > 적고 나서 다시 읽어보니까
 > 회사에서 신입한테 해주는 말이랑 똑같네요 ㅋㅋ
 
-## Reversal (뒤집기) · reposts
+## Reversal (뒤집기) (reposts)
 A common belief, then what actually happened. Both concrete. The body proves the second half.
 
-## List (목록) · saves
+## List (목록) (saves)
 Only when the content is a list. One line per item, plain `1.`, no bold. Under 6 items. Intro is one line. No moral at the end; one easy question at most.
 
-## Question (질문) · replies
+## Question (질문) (replies)
 One real question the user wants answered, with enough context in one or two lines for strangers to answer it.
 
-## One-liner (한두 줄) · likes, reposts
+## One-liner (한두 줄) (likes, reposts)
 One feeling or one verdict. No setup, no explanation. If a second line exists, it twists the first.
 
 > AI 티 안 나게 글 써주는 스킬 16개 깔아봄
 > 결론: AI 티는 안 나는데 재미도 안 남
 
-## Finding (발견) · saves, reposts
+## Finding (발견) (saves, reposts)
 The user tried something and learned facts others can use. Title line says what was tried; numbered facts; one closing line on what the user does now. Every item must be checked, not remembered.
 
 > 클로드 스킬 GitHub에서 16개 깔아보면서 알게 된 거
@@ -57,9 +57,9 @@ The user tried something and learned facts others can use. Title line says what 
 >
 > 그래서 이제 깔기 전에 SKILL.md랑 hooks 폴더는 꼭 열어봄
 
-## Hot take (한마디) · replies, quotes
+## Hot take (한마디) (replies, quotes)
 An attitude about a trend: 짜증, 냉소, 자조. Name the trend concretely, give the user's reaction, stop. Self-mockery lands better than mocking others; never target a named private person.
 
 ## Threads limits
 - 500 characters per post. Split into a thread only when each post can stand alone.
-- 0 or 1 hashtag. No link in the first post. At most 2 emoji.
+- 0 or 1 hashtag. No link in the first post. No emoji, middle dots, circled numbers, or Unicode arrows.

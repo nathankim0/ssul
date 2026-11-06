@@ -6,7 +6,7 @@ Use when the user asks to write or fix their bio. A stranger who liked one post 
 
 | Part | Rule |
 |---|---|
-| Name | the name people will search, plus one keyword if the field allows (e.g. "김OO · 농사 기록"). No emoji walls. |
+| Name | the name people will search, plus one keyword if the field allows (e.g. "김OO 농사 기록"). No emoji, no middle dots. |
 | Bio line 1 | who the user is, concretely: role, place, or what they do daily |
 | Bio line 2 | what followers get here: the 2 or 3 pillars, in plain words |
 | Bio line 3 (optional) | one real proof: a number, a project, years doing it. Only if true. |

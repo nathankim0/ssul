@@ -1,6 +1,6 @@
 ---
 name: ssul
-description: Write, polish, or audit Korean social content (Threads and X posts and threads, replies, Instagram captions, Reels/Shorts scripts, bios, hook images) so it reads like a real person telling a true story, not like AI. Use when the user asks for a Threads post, 스레드 글, 바이럴 글, 후킹 글, 일상 글, SNS 글, 썰, 답글, 캡션, 릴스 대본, 프로필, 콘텐츠 계획, wants hooks or an image for a post, pastes viral posts to analyze, wants a blog or video turned into a post, says a draft "AI 같다", "너무 무겁다", "뭔 소린지 모르겠다", or needs sponsorship (광고·협찬) disclosure. Real material first; hooks, storytelling, Korean anti-AI editing, spoken register, meaning-safe polishing, proofreading, and Korean disclosure rules in one pass.
+description: Write, polish, or audit Korean social content (Threads and X posts and threads, replies, Instagram captions, Reels/Shorts scripts, bios, hook images) so it reads like a real person telling a true story, not like AI. Use when the user asks for a Threads post, 스레드 글, 바이럴 글, 후킹 글, 일상 글, SNS 글, 썰, 답글, 캡션, 릴스 대본, 프로필, 콘텐츠 계획, wants hooks or an image for a post, pastes viral posts to analyze, wants a blog or video turned into a post, says a draft "AI 같다", "너무 무겁다", "뭔 소린지 모르겠다", or needs sponsorship (광고, 협찬) disclosure. Real material first; hooks, storytelling, Korean anti-AI editing, spoken register, meaning-safe polishing, proofreading, and Korean disclosure rules in one pass.
 argument-hint: "[topic, rough notes, or a draft to fix]"
 ---
 
@@ -76,9 +76,9 @@ One register per post. Quotes inside the post keep the speaker's register.
 
 Choose by what the material has:
 
-- a real event with a turn → Scene or Confession
-- facts the reader can use → Finding or List
-- an attitude → Hot take or One-liner
+- a real event with a turn -> Scene or Confession
+- facts the reader can use -> Finding or List
+- an attitude -> Hot take or One-liner
 
 **Do not manufacture humor.** If nothing in the material is actually funny, do not build a punchline. Write the Finding or the attitude instead. Attitude (annoyance, cynicism, self-mockery) carries a post further than a forced joke. Shorter is usually better: a two-line post is a complete post.
 
@@ -112,9 +112,9 @@ Run all of these, in order, on every draft. Details in `references/korean-voice.
 2. **Stranger test**: someone with zero context understands every line. Replace insider words ("윤문 스킬", project names, inside jokes) with plain words. If you need the conversation to understand the post, it fails.
 3. **Weight test**: does it read like a report? Cut setup, lists that are not lists, explanations of the joke, and the moral at the end.
 4. **Value test**: what does a stranger get: a fact they can use, a feeling they recognize, or a real laugh? If none, change the shape or the material. Do not polish a post that gives nothing.
-5. **Korean AI tells**: lesson endings, `X가 아니라 Y다` with a vague Y, rule-of-three lists, 명사화 (`진행하다`, `공유드리다`), 번역투 (`당신`, `~하는 것은 중요합니다`), stacked adjectives, em dashes, curly quotes for emphasis, bold.
+5. **Korean AI tells**: lesson endings, `X가 아니라 Y다` with a vague Y, rule-of-three lists, 명사화 (`진행하다`, `공유드리다`), 번역투 (`당신`, `~하는 것은 중요합니다`), stacked adjectives, em dashes, curly quotes for emphasis, bold, middle dots (`·`), circled numbers (①), Unicode arrows (→; write `->`), emoji.
 6. **Spoken register**: no report words (따라서, 종합하면, 부각, 안착), no 4 identical sentence endings in a row, at most one self-question.
-7. **Platform**: 0 or 1 hashtag, no link in the first post (links go in the first reply, `references/threads.md`), at most 2 emoji, ends without engagement bait.
+7. **Platform**: 0 or 1 hashtag, no link in the first post (links go in the first reply, `references/threads.md`), no emoji, ends without engagement bait.
 8. **Disclosure**: if the user received anything for the post (money, product, discount, points, commission), the first part of the post says so in Korean, by Korean FTC rules (`references/disclosure.md`). If a product or service is recommended and you do not know, ask. Realistic AI people or images are labeled.
 9. **Meaning and spelling** (polish mode, and before any output): negation, conditions, limits (`만`, `까지`, `이내`), numbers, and the author's claims are unchanged; clear spelling and spacing errors are fixed without "correcting" intentional casual style (`references/polish.md`).
 

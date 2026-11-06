@@ -22,6 +22,7 @@ The hook has three layers, all landing at once:
 
 - 1 line per beat, 3 to 9 words, high contrast, placed away from the platform's buttons at the bottom and right.
 - Korean subtitles of everything said, or at least the key lines.
+- No emoji, middle dots, circled numbers, or Unicode arrows in on-screen text or the caption.
 
 ## Caption
 

@@ -9,10 +9,10 @@ Run only when the user asks for an image ("이미지 만들어줘", "썸네일",
 | Size | portrait 4:5 (about 1080x1350) for Threads and Instagram; 1:1 if the user asks |
 | Headline | the post's first line, 2 lines max, about 6 to 12 Korean characters per line |
 | Emphasis | one phrase in a contrasting color (yellow on dark, or red on light); everything else white or black |
-| Label | optional one small label with the key number or contrast from the post |
+| Label | optional one small label with the key number or contrast from the post; separate items with a space or `/`, never a middle dot `·` |
 | Scene | the post's real subject, concrete and in season: the actual object, place, and time of year |
 | Style | realistic photo for information and farm or food posts; simple illustration for opinions and hot takes |
-| Never | text not given in the prompt, logos, watermarks, brand names, real people's faces, invented events presented as real |
+| Never | emoji, circled numbers, text not given in the prompt, logos, watermarks, brand names, real people's faces, invented events presented as real |
 
 Every number in the image must match the post and its source. A short label can change meaning ("배추 -3℃" can read as "cabbage freezes at -3℃"); if a number cannot be labeled without that risk, leave it out.
 

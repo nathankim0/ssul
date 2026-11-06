@@ -48,7 +48,7 @@ Every post goes through these checks:
 2. **Stranger test**: someone with zero context understands every line
 3. **Weight test**: no setup, no fake lists, no morals
 4. **Value test**: a stranger gets a usable fact, a recognizable feeling, or a real laugh; no forced jokes
-5. **Korean AI tells**, graded S1 to S3
+5. **Korean AI tells**, graded S1 to S3, including emoji, middle dots (`·`), circled numbers (①), and Unicode arrows (→)
 6. **Spoken register**: no 4 identical endings in a row, no report words
 7. **Platform**: under 500 characters, 0 or 1 hashtag, at most one question
 8. **Disclosure**: anything received for the post is stated up front, in Korean, by Korean FTC rules (광고, 협찬)

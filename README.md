@@ -58,43 +58,49 @@ Every post goes through these checks:
 
 ## Examples
 
-All examples were made with ssul v1.6.0. Facts come from the sources named under each one; nothing is invented.
+All examples were made with ssul v1.6. Facts come from the sources named under each one; nothing is invented.
 
 ### 1. Same facts, three rolled voices
 
-Input: *"Post about when to cover garlic, three versions."* ssul ran `roll.py --n 3 --pool warm`; each post got its own roll.
+Input: *"Post about when to cover garlic, three versions."* ssul ran `roll.py --n 3 --pool warm`; each post got its own roll. Two of the three rolled `laugh: none`, so they have no ㅋ at all.
 
-Roll: `haeyo, ㅋ, ..., long, reaction, question`
+Roll: `banmal_talk, none, .., long, address, question`
 
 ```text
-와 마늘 덮는 것도 타이밍이 있대요...
-너무 일찍 덮으면 겨울 오기 전에 싹이 웃자라서
-오히려 언 피해를 입을 수 있대요
-그래서 기온 떨어지는 11월 중순에서 하순쯤 덮는 게 좋다고 하고요
+스친이들 마늘 덮는 것도 타이밍이 있대..
+춥다고 일찍 덮어주면 좋을 것 같잖아
+근데 너무 일찍 덮으면 겨울 오기 전에 싹이 웃자란대
+그 상태로 추위 오면 오히려 언 피해를 입고..
+그래서 기온 떨어지는 11월 중순에서 하순쯤 덮는 게 좋대
 덮기 전에 뿌리 잘 내렸는지 한 번 보고
-물도 넉넉히 주라네요 ㅋ
-마늘 키우는 분들은 보통 언제 덮으세요?
+물도 넉넉히 주고
+이게 중부 기준이라 남쪽은 또 다를 수 있대
+다들 마늘 보통 언제 덮어?
 ```
 
-Roll: `banmal_talk, ㅋㅋ, .., short, straight, question`
+Roll: `banmal_talk, ㅋㅋ, none, long, address, stop`
 
 ```text
-마늘 너무 일찍 덮으면 오히려 언대..
-싹이 웃자라서 그렇다고 ㅋㅋ
+스친이들 마늘이 생각보다 예민하더라
+일찍 심으면 쪽이 갈라지고
+늦게 심으면 뿌리를 잘 못 내리고
+깊이도 마늘쪽 길이 2~3배로 맞춰야 되고
+겨우 다 심었다 싶으면 이번엔 덮는 타이밍이 있음 ㅋㅋ
+너무 일찍 덮으면 싹이 웃자라서 얼 수 있대
+그래서 11월 중순에서 하순쯤 덮는 거래
+그 전에 뿌리 내렸는지 보고 물도 넉넉히 주고
+```
+
+Roll: `banmal_talk, none, none, short, straight, question`
+
+```text
+마늘 너무 일찍 덮으면 오히려 얼 수 있대
+싹이 겨울 오기 전에 웃자라서 그렇다고
 11월 중순에서 하순쯤 덮는 게 좋대
-다들 벌써 덮었어??
+다들 언제 덮어?
 ```
 
-Roll: `banmal_talk, ㅋㅋ, none, short, reaction, reaction`
-
-```text
-아니 마늘 춥다고 일찍 덮어주면 오히려 얼 수 있대
-겨울 오기 전에 싹이 웃자라서 그렇다고
-11월 중순 넘어서 덮으래
-챙겨줘도 뭐라 하네 ㅋㅋ
-```
-
-Facts: covering too early makes sprouts overgrow before winter and freeze; cover in mid to late November; check roots and water first (Icheon Agricultural Technology Center).
+Facts: covering too early makes sprouts overgrow before winter and freeze; cover in mid to late November; check roots and water first (Icheon Agricultural Technology Center). Planting too early splits cloves, too late weakens rooting, depth 2 to 3 times the clove length (RDA).
 
 ### 2. Threads, follower address on
 

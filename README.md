@@ -33,6 +33,7 @@ So ssul does one thing first: it gets **real material** from you or from the con
 | Polish | a draft + "AI 같아", "너무 무거워" | the fixed post and what changed |
 | Audit | "검사해줘" | findings only, with the exact words |
 | Hooks | "첫 줄만" | 3 first lines from different triggers, and a pick |
+| Image | "이미지 만들어줘" | a 4:5 hook image for the post, headline text checked character by character |
 
 Every post goes through these checks:
 
@@ -61,6 +62,11 @@ Shape: Finding. Register: 반말 혼잣말 (the AI and dev niche default).
 ```
 
 Every item was checked during the install, not remembered. That is the point.
+
+## Requirements
+
+- Nothing for writing, polishing, and auditing.
+- For image mode: [Codex CLI](https://github.com/openai/codex) with image generation enabled, or an `OPENAI_API_KEY`.
 
 ## Install
 
@@ -92,6 +98,7 @@ npx skills add nathankim0/ssul
 /ssul 이 글 AI 같은데 다듬어줘: <draft>
 /ssul 검사만 해줘: <draft>
 /ssul 첫 줄만 3개
+/ssul 이 글로 이미지 만들어줘
 ```
 
 If you have not given enough real material, ssul asks up to three short questions first. Paste two or three of your past posts and it matches your voice.
@@ -107,6 +114,7 @@ skills/ssul/references/
   interview.md                    questions for getting real material
   formats.md                      scene, confession, reversal, list, question, one-liner, finding, hot take
   checklist.md                    final pass and audit format
+  images.md                       hook image spec, generation prompt, and checks
 .claude-plugin/                   Claude Code plugin and marketplace manifests
 ```
 

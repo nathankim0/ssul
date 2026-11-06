@@ -20,6 +20,9 @@ Pick the mode from the request. Do not ask which one.
 | a draft + "다듬어줘 / AI 같아 / 무거워" | **polish** | the fixed post + changed points |
 | "검사해줘 / 뭐가 문제야" | **audit** | findings only, no rewrite |
 | "훅만 / 첫 줄만" | **hooks** | 3 first lines from different triggers + a pick |
+| "이미지 / 썸네일 / 카드 만들어줘" | **image** | one generated image for the post (`references/images.md`) |
+
+In image mode, use the current post (draft one first if none exists). Follow `references/images.md`: 4:5 portrait, the first line as the headline, the real subject as the scene, GPT image generation through the Codex CLI, then check every Korean character before showing it.
 
 ## Step 1. Get real material (draft mode)
 

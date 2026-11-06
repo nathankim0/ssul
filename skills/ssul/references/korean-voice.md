@@ -43,7 +43,7 @@ Posts that feel human in the Korean feed are not tight. Over-crafted structure (
 
 | Texture | Looks like |
 |---|---|
-| Talk to followers | 스친이들, 다들, 여러분은 어떻게 해? (when the user really wants to talk to them) |
+| Talk to followers | 스친이들, 다들, 여러분은 어떻게 해? Use it in any shape, jokes included, whenever the voice source does it; it is a speech habit, not only a way to ask |
 | Things in the order they happened | 30분 전에 메일이 온 거야 / 근데 들어가 보니까 진짜 안 되더라고?? / 카드정보 넣고 나니까 정신이 차려져서 |
 | Thinking out loud | `..`, `??`, 하.., 근데, 아 그리고, 물론 내 생각임. 근데 보통 맞음 |
 | Feelings in plain words | 대가리 터질 것 같다, 돈이 살살 녹겠네, 흑흑 |
@@ -52,6 +52,8 @@ Posts that feel human in the Korean feed are not tight. Over-crafted structure (
 
 Rules:
 
+- When the voice source (the user's posts or pasted feed samples) addresses followers, keep doing it in every shape: Scene, Hot take, 병맛 jokes, Finding.
+- Humor posts (병맛) can end on a real question or a plain reaction (ㅋㅋㅋ, 아니 이게 맞냐고) instead of a crafted punchline.
 - Not every post needs a hook formula or a last-line punch. Scene, Confession, and Question posts can simply tell what happened and ask.
 - Use texture the user's material supports. Do not fake feelings the user did not express.
 - Never inject fake typos. Keep the user's own typos and spacing when polishing unless they ask for proofreading.

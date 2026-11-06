@@ -103,7 +103,7 @@ Keep the one that passes all four. A first-person line is fine when the moment i
 2. Fill the middle with beats joined by **근데** (but) or **그래서** (so). If "그리고 나서" fits between two beats, one of them is filler.
 3. Write the way the user would say it to one friend. Line breaks follow breath.
 4. Stay under 500 characters per post (Threads limit). Casual daily posts usually land at 120 to 300.
-5. **Leave texture in** (`references/korean-voice.md#human-texture`): talk to followers when asking, tell things in the order they happened, keep `..` and `??` and plain feelings. A post that is too neat reads as AI.
+5. **Leave texture in** (`references/korean-voice.md#human-texture`): talk to followers whenever the voice source does (in every shape, jokes included), tell things in the order they happened, keep `..` and `??` and plain feelings. A post that is too neat reads as AI.
 
 ## Step 6. Run the passes
 

@@ -17,7 +17,7 @@ It merges four kinds of open-source writing skills into one pass and settles the
 - **Hooks**: first-line formulas and the four ways a first line dies
 - **Storytelling**: write the last line first, join beats with "but" and "so"
 - **Korean anti-AI editing**: lesson endings, hollow reversals, 명사화, 번역투, rule-of-three lists
-- **Spoken register (구어체)**: endings people actually say, no report words
+- **Spoken register (구어체)**: endings people actually say, chosen by niche (반말 혼잣말 for AI and dev feeds, 해요체 for daily life), no report words
 
 ## Why it exists
 
@@ -39,30 +39,28 @@ Every post goes through these checks:
 1. **Truth**: every number, name, quote, and event is real, or marked `[like this]` as a placeholder
 2. **Stranger test**: someone with zero context understands every line
 3. **Weight test**: no setup, no fake lists, no morals
-4. **Korean AI tells**, graded S1 to S3
-5. **Spoken register**: no 4 identical endings in a row, no report words
-6. **Platform**: under 500 characters, 0 or 1 hashtag, at most one question
+4. **Value test**: a stranger gets a usable fact, a recognizable feeling, or a real laugh; no forced jokes
+5. **Korean AI tells**, graded S1 to S3
+6. **Spoken register**: no 4 identical endings in a row, no report words
+7. **Platform**: under 500 characters, 0 or 1 hashtag, at most one question
 
 ## Example
 
-Input: *"Write a post about today: I asked Claude for a Threads post and ended up installing 16 skill repos."*
+Input: *"I installed 16 skill repos from GitHub today and checked their hooks and scripts. Write a Threads post for the AI crowd."*
+
+Shape: Finding. Register: 반말 혼잣말 (the AI and dev niche default).
 
 ```text
-클로드한테 스레드 글 좀 써달라 했는데
-계속 AI가 쓴 티가 나는 거예요
+클로드 스킬 GitHub에서 16개 깔아보면서 알게 된 거
 
-그래서 글 잘 쓰게 해주는 스킬을 16개나 깔아줬어요
-그래도 티가 나길래
-"스킬 쓴 거 맞아?" 물어보니까
-"아니요, 그냥 썼습니다" ㅋㅋㅋ
+1. 어떤 플러그인은 깔면 내가 메시지 보낼 때마다 스크립트가 돎
+2. 어떤 스킬은 지침이 파일에 없고 쓸 때마다 인터넷에서 받아옴. 내용이 언제든 바뀔 수 있다는 뜻
+3. 라이선스 없는 레포도 있음. 이건 가져다 쓰면 안 됨
 
-다시 시켰더니 이번엔 이러더라고요
-"말투는 고쳤는데, 진짜 있었던 일을 하나 알려주셔야 해요"
-
-...그럼 그냥 내가 쓰는 거잖아
+그래서 이제 깔기 전에 SKILL.md랑 hooks 폴더는 꼭 열어봄
 ```
 
-Every detail in it happened. That is the point.
+Every item was checked during the install, not remembered. That is the point.
 
 ## Install
 
@@ -103,11 +101,11 @@ If you have not given enough real material, ssul asks up to three short question
 ```text
 skills/ssul/SKILL.md              the skill
 skills/ssul/references/
-  conflicts.md                    14 contradictions between source skills, and the rulings
+  conflicts.md                    16 contradictions between source skills, and the rulings
   hooks.md                        first-line triggers and killers, written in Korean
   korean-voice.md                 구어체 endings and Korean AI tells (S1 to S3)
   interview.md                    questions for getting real material
-  formats.md                      scene, confession, reversal, list, question
+  formats.md                      scene, confession, reversal, list, question, one-liner, finding, hot take
   checklist.md                    final pass and audit format
 .claude-plugin/                   Claude Code plugin and marketplace manifests
 ```

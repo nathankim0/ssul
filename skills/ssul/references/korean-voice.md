@@ -1,8 +1,23 @@
 # Korean voice rules
 
+## Register by niche
+
+Use this only when the user gave no samples of their own posts and no feed samples.
+
+| Niche | Default register | Endings | Feel |
+|---|---|---|---|
+| AI, dev, startup, investing, tech news, hot takes | **반말 혼잣말** | `~다`, `~함`, `~임`, `~네`, `~냐`, `~듯`, bare nouns | talking to yourself in public; attitude shows |
+| daily life, parenting, food, travel, pets | **해요체 구어** | `~거든요`, `~더라고요`, `~잖아요`, `~죠`, `~네요` | telling a friend |
+| brand or business accounts | **해요체 구어**, lighter on ㅋㅋ | same | friendly, not cute |
+
+반말 혼잣말 example (two lines is a full post):
+
+> 별 5천 개짜리 클로드 스킬 깔았더니 유료 API 키 내놓으래
+> 스킬계에도 강의팔이 왔냐
+
 ## Spoken register (구어체)
 
-Write it the way the user would say it to a friend over coffee.
+Write it the way the user would actually say it, in the register chosen above.
 
 Useful endings, mixed naturally:
 

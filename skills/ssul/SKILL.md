@@ -37,10 +37,13 @@ If you do not have enough, ask at most 3 short questions from `references/interv
 
 ## Step 2. Fix the voice
 
-- If the user gave samples of their own posts (3 or more), read them first and note: sentence endings (해요체 / 반말 / 음슴체 / 하다체), how often they use ㅋㅋ, emoji, line length, how they open and close. Match that. Their samples override every default below.
-- With no samples, default to **해요체 구어** (말하듯이): `~거든요`, `~더라고요`, `~잖아요`, `~죠`, `~네요`, plus bare noun endings for punch. This is the register of the posts that do well in the Korean Threads feed.
-- `~함 / ~됨` (음슴체) is an internet register, not spoken Korean. Use it only if the user's own samples use it.
-- One register per post. Quotes inside the post keep the speaker's register.
+Pick the register in this order. The first source that exists wins.
+
+1. **The user's own posts** (3 or more): note endings, how often they use ㅋㅋ and emoji, line length, openers and closers. Match them.
+2. **Feed samples the user pasted** (other people's posts they want to sound like): match the register most of those posts use, not the polite average.
+3. **The niche default** (`references/korean-voice.md#register-by-niche`): AI, dev, startup, investing, and hot-take posts default to **반말 혼잣말** (`~다`, `~함`, `~임`, `~네`, `~냐`). Daily life, parenting, food, and brand accounts default to **해요체 구어** (`~거든요`, `~더라고요`, `~잖아요`).
+
+One register per post. Quotes inside the post keep the speaker's register.
 
 ## Step 3. Pick the shape
 
@@ -51,8 +54,19 @@ If you do not have enough, ask at most 3 short questions from `references/interv
 | **Reversal** (뒤집기) | a common belief vs what actually happened, both concrete | reposts |
 | **List** (목록) | the content is truly a list (tools, steps) and each item is one line | saves |
 | **Question** (질문) | the user genuinely wants answers | replies |
+| **One-liner** (한두 줄) | one feeling or one verdict says it all | likes, reposts |
+| **Finding** (발견) | the user tried something and learned facts others can use | saves, reposts |
+| **Hot take** (한마디) | the user has an attitude about a trend: 짜증, 냉소, 자조 | replies, quotes |
 
-Daily posts default to **Scene** or **Confession**. Use **List** only when the content is a list; a list makes a casual post feel heavy.
+Choose by what the material has:
+
+- a real event with a turn → Scene or Confession
+- facts the reader can use → Finding or List
+- an attitude → Hot take or One-liner
+
+**Do not manufacture humor.** If nothing in the material is actually funny, do not build a punchline. Write the Finding or the attitude instead. Attitude (annoyance, cynicism, self-mockery) carries a post further than a forced joke. Shorter is usually better: a two-line post is a complete post.
+
+**No navel-gazing.** A story about the writing session itself, the tools used to write it, or the AI that helped is insider material. It passes only if the reader has lived the same thing.
 
 Format details per shape: `references/formats.md`.
 
@@ -81,9 +95,10 @@ Run all of these, in order, on every draft. Details in `references/korean-voice.
 1. **Truth**: every number, name, quote, and event is real or bracketed.
 2. **Stranger test**: someone with zero context understands every line. Replace insider words ("윤문 스킬", project names, inside jokes) with plain words. If you need the conversation to understand the post, it fails.
 3. **Weight test**: does it read like a report? Cut setup, lists that are not lists, explanations of the joke, and the moral at the end.
-4. **Korean AI tells**: lesson endings, `X가 아니라 Y다` with a vague Y, rule-of-three lists, 명사화 (`진행하다`, `공유드리다`), 번역투 (`당신`, `~하는 것은 중요합니다`), stacked adjectives, em dashes, curly quotes for emphasis, bold.
-5. **Spoken register**: no report words (따라서, 종합하면, 부각, 안착), no 4 identical sentence endings in a row, at most one self-question.
-6. **Platform**: 0 or 1 hashtag, no link in the first post, at most 2 emoji, ends without engagement bait.
+4. **Value test**: what does a stranger get: a fact they can use, a feeling they recognize, or a real laugh? If none, change the shape or the material. Do not polish a post that gives nothing.
+5. **Korean AI tells**: lesson endings, `X가 아니라 Y다` with a vague Y, rule-of-three lists, 명사화 (`진행하다`, `공유드리다`), 번역투 (`당신`, `~하는 것은 중요합니다`), stacked adjectives, em dashes, curly quotes for emphasis, bold.
+6. **Spoken register**: no report words (따라서, 종합하면, 부각, 안착), no 4 identical sentence endings in a row, at most one self-question.
+7. **Platform**: 0 or 1 hashtag, no link in the first post, at most 2 emoji, ends without engagement bait.
 
 ## Output
 

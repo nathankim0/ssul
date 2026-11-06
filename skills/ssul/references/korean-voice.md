@@ -52,12 +52,30 @@ Posts that feel human in the Korean feed are not tight. Over-crafted structure (
 
 Rules:
 
-- When the voice source (the user's posts or pasted feed samples) addresses followers, keep doing it in every shape: Scene, Hot take, 병맛 jokes, Finding.
+- When the voice source addresses followers and the address option is on (see Follower address), keep doing it in every shape: Scene, Hot take, 병맛 jokes, Finding.
 - Humor posts (병맛) can end on a real question or a plain reaction (ㅋㅋㅋ, 아니 이게 맞냐고) instead of a crafted punchline.
 - Not every post needs a hook formula or a last-line punch. Scene, Confession, and Question posts can simply tell what happened and ask.
 - Use texture the user's material supports. Do not fake feelings the user did not express.
 - Never inject fake typos. Keep the user's own typos and spacing when polishing unless they ask for proofreading.
 - The bans still hold: no emoji, no `·`, no ①, no →.
+
+## Follower address
+
+| Target | Address | Notes |
+|---|---|---|
+| Threads | 스친이들, 스친분들, 다들 | 반말 posts: 스친이들; 해요체 posts: 스친분들 |
+| Instagram | 인친님들, 다들 | |
+| X | 트친들, 다들 | |
+| Community boards and cafes | none by default | use the board's own habit only if the user gives it |
+| Brand accounts | none, or 여러분 | |
+
+"다들" works on every SNS and is the safe choice when the user wants a softer address. When dropping the address, keep the sentence natural:
+
+> 스친이들 배추도 패딩 입히는 타이밍이 있대 ㅋㅋ
+> -> 배추도 패딩 입히는 타이밍이 있대 ㅋㅋ
+
+> 다들 무 벌써 캤어??
+> -> 무 벌써 캔 사람?? (a question to readers without an address)
 
 ## Korean AI tells
 

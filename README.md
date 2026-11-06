@@ -141,9 +141,11 @@ npx skills add nathankim0/ssul
 /ssul 이 글에 답글 달아줘: <post>
 /ssul 이 블로그 글 스레드로 바꿔줘: <text>
 /ssul 이번 주 뭐 올리지
+/ssul 스친 빼고 다시 써줘
+/ssul 커뮤니티용으로 써줘
 ```
 
-If you have not given enough real material, ssul asks up to three short questions first. Paste two or three of your past posts and it matches your voice; with your OK it saves your voice and stories to `~/.ssul/` so you do not repeat them.
+If you have not given enough real material, ssul asks up to three short questions first. Follower address (스친이들, 인친님들, 트친들) follows the platform and can be turned on or off ("스친 빼고"). Paste two or three of your past posts and it matches your voice; with your OK it saves your voice and stories to `~/.ssul/` so you do not repeat them.
 
 ## Repository layout
 

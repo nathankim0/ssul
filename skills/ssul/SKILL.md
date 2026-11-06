@@ -61,6 +61,14 @@ Pick the register in this order. The first source that exists wins.
 
 One register per post. Quotes inside the post keep the speaker's register.
 
+**Follower address is an option.** Decide it from the request, in this order:
+
+1. The user says so: "스친 넣어서", "스친 빼고", "호칭 없이", "인친님들로".
+2. The target platform: Threads -> 스친이들, Instagram -> 인친님들, X -> 트친들. Community boards, cafes, and anything else -> no SNS-friend address; follow the board's own habit if the user gives it, otherwise none.
+3. No platform named -> follow the voice source; if it addresses followers, include it and say in the notes that the address line can be dropped for other platforms.
+
+When the address is removed, rewrite the opening so it still reads naturally; do not just delete the word. Details: `references/korean-voice.md#follower-address`.
+
 ## Step 3. Pick the shape
 
 | Shape | Use when | Goal |

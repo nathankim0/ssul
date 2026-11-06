@@ -106,7 +106,7 @@ Input: *"I built 3 open-source skills today and they all have 0 stars. Threads p
 이게 맞냐고
 ```
 
-The star count was checked on GitHub on 2026-11-06.
+The star counts were 0 when checked on GitHub on 2026-11-06, when the post was written. ssul got its first star later that day.
 
 ### 3. Community board, address off, with a hook image
 

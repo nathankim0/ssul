@@ -1,6 +1,6 @@
 ---
 name: ssul
-description: Write, polish, or audit short Korean social posts (Threads, X, Instagram captions, community posts) so they read like a real person telling a true story, not like AI. Use when the user asks for a Threads post, 스레드 글, 바이럴 글, 후킹 글, 일상 글, SNS 글, 썰, wants hooks for a Korean post, says a draft "AI 같다", "너무 무겁다", "뭔 소린지 모르겠다", or wants a draft rewritten in natural 구어체. Combines hook craft, storytelling, Korean anti-AI editing, and spoken-register rules into one pass, with real material required before drafting.
+description: Write, polish, or audit Korean social content (Threads and X posts and threads, replies, Instagram captions, Reels/Shorts scripts, bios, hook images) so it reads like a real person telling a true story, not like AI. Use when the user asks for a Threads post, 스레드 글, 바이럴 글, 후킹 글, 일상 글, SNS 글, 썰, 답글, 캡션, 릴스 대본, 프로필, 콘텐츠 계획, wants hooks or an image for a post, pastes viral posts to analyze, wants a blog or video turned into a post, says a draft "AI 같다", "너무 무겁다", "뭔 소린지 모르겠다", or needs sponsorship (광고·협찬) disclosure. Real material first; hooks, storytelling, Korean anti-AI editing, spoken register, meaning-safe polishing, proofreading, and Korean disclosure rules in one pass.
 argument-hint: "[topic, rough notes, or a draft to fix]"
 ---
 
@@ -17,12 +17,25 @@ Pick the mode from the request. Do not ask which one.
 | Request | Mode | Output |
 |---|---|---|
 | "써줘", topic or notes | **draft** | one post + a 3-line note |
-| a draft + "다듬어줘 / AI 같아 / 무거워" | **polish** | the fixed post + changed points |
+| a draft + "다듬어줘 / AI 같아 / 무거워 / 맞춤법" | **polish** | the fixed post + changed points (`references/polish.md`) |
 | "검사해줘 / 뭐가 문제야" | **audit** | findings only, no rewrite |
 | "훅만 / 첫 줄만" | **hooks** | 3 first lines from different triggers + a pick |
 | "이미지 / 썸네일 / 카드 만들어줘" | **image** | one generated image for the post (`references/images.md`) |
+| a post + "답글 / 인용" | **reply** | 2 or 3 replies or a quote post (`references/reply.md`) |
+| pasted posts + "이거 봐 / 왜 터졌어 / 이런 식으로" | **analyze** | pattern per post, a summary, ideas from the user's material (`references/analyze.md`) |
+| a blog, video, README, notes + "스레드로" | **repurpose** | 1 to 3 posts from the strongest points (`references/repurpose.md`) |
+| "스레드로 길게 / 연재" | **thread** | a multi-post thread with per-post counts (`references/threads.md`) |
+| "뭐 올리지 / 이번 주 계획" | **plan** | a week of ideas tied to real material (`references/plan.md`) |
+| "프로필 / 바이오" | **profile** | 2 bio options + pinned-post pick (`references/profile.md`) |
+| "릴스 / 쇼츠 / 틱톡 대본 / 캡션" | **video** | script with on-screen text, and caption (`references/short-video.md`) |
 
 In image mode, use the current post (draft one first if none exists). Follow `references/images.md`: 4:5 portrait, the first line as the headline, the real subject as the scene, GPT image generation through the Codex CLI, then check every Korean character before showing it.
+
+Every mode uses the same core: real material (Step 1), voice (Step 2), and the passes (Step 6). Out of scope: paid ads, SEO, landing pages, email, and other non-social marketing.
+
+## Step 0. Load what is already known
+
+If `~/.ssul/voice.md` or `~/.ssul/story-bank.md` exist, read them first (`references/voice-bank.md`). They are the voice source and real material. When the user gives new real material or corrects the voice, offer once to save it there.
 
 ## Step 1. Get real material (draft mode)
 
@@ -101,7 +114,9 @@ Run all of these, in order, on every draft. Details in `references/korean-voice.
 4. **Value test**: what does a stranger get: a fact they can use, a feeling they recognize, or a real laugh? If none, change the shape or the material. Do not polish a post that gives nothing.
 5. **Korean AI tells**: lesson endings, `X가 아니라 Y다` with a vague Y, rule-of-three lists, 명사화 (`진행하다`, `공유드리다`), 번역투 (`당신`, `~하는 것은 중요합니다`), stacked adjectives, em dashes, curly quotes for emphasis, bold.
 6. **Spoken register**: no report words (따라서, 종합하면, 부각, 안착), no 4 identical sentence endings in a row, at most one self-question.
-7. **Platform**: 0 or 1 hashtag, no link in the first post, at most 2 emoji, ends without engagement bait.
+7. **Platform**: 0 or 1 hashtag, no link in the first post (links go in the first reply, `references/threads.md`), at most 2 emoji, ends without engagement bait.
+8. **Disclosure**: if the user received anything for the post (money, product, discount, points, commission), the first part of the post says so in Korean, by Korean FTC rules (`references/disclosure.md`). If a product or service is recommended and you do not know, ask. Realistic AI people or images are labeled.
+9. **Meaning and spelling** (polish mode, and before any output): negation, conditions, limits (`만`, `까지`, `이내`), numbers, and the author's claims are unchanged; clear spelling and spacing errors are fixed without "correcting" intentional casual style (`references/polish.md`).
 
 ## Output
 

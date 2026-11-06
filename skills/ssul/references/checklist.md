@@ -11,6 +11,8 @@ Run before returning any post. In audit mode, print each failed item with the ex
 - [ ] **Beats.** Joined by 근데 or 그래서, never "그리고 나서" filler.
 - [ ] **Register.** Chosen from user posts, then feed samples, then the niche default. One register. No 4 identical endings in a row.
 - [ ] **Korean AI tells.** No S1 hits. S2 only if it is the user's own voice.
+- [ ] **Disclosure.** Anything received for the post is stated in the first part, in Korean, with approved wording (`disclosure.md`). AI people and realistic AI images are labeled.
+- [ ] **Meaning and spelling.** Negation, conditions, limits, numbers, and claims unchanged (polish); clear spelling and spacing errors fixed; intentional casual style kept.
 - [ ] **Platform.** Under 500 characters, 0 or 1 hashtag, no link in post 1, at most 2 emoji, at most one question.
 - [ ] **Output.** Post first, then at most 3 short notes. Nothing published.
 

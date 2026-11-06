@@ -56,52 +56,99 @@ Every post goes through these checks:
 8. **Disclosure**: anything received for the post is stated up front, in Korean, by Korean FTC rules (광고, 협찬)
 9. **Meaning and spelling**: negation, conditions, and numbers unchanged when polishing; clear spelling errors fixed, casual style kept
 
-## Example
+## Examples
 
-Input: *"I installed 16 skill repos from GitHub today and checked their hooks and scripts. Write a Threads post for the AI crowd."*
+All examples were made with ssul v1.6.0. Facts come from the sources named under each one; nothing is invented.
 
-Shape: Finding. Register: 반말 혼잣말 (the AI and dev niche default).
+### 1. Same facts, three rolled voices
 
-```text
-클로드 스킬 GitHub에서 16개 깔아보면서 알게 된 거
+Input: *"Post about when to cover garlic, three versions."* ssul ran `roll.py --n 3 --pool warm`; each post got its own roll.
 
-1. 어떤 플러그인은 깔면 내가 메시지 보낼 때마다 스크립트가 돎
-2. 어떤 스킬은 지침이 파일에 없고 쓸 때마다 인터넷에서 받아옴. 내용이 언제든 바뀔 수 있다는 뜻
-3. 라이선스 없는 레포도 있음. 이건 가져다 쓰면 안 됨
-
-그래서 이제 깔기 전에 SKILL.md랑 hooks 폴더는 꼭 열어봄
-```
-
-Every item was checked during the install, not remembered. That is the point.
-
-### A farming tip, with a hook image
-
-Input: *"A Threads post for farmers, early November, first below-zero days. No personal story; use checked facts."*
-
-Shape: Finding. Register: 해요체 (the daily-life and farming default). First line picked from 3 candidates (number, question, reversal); the reversal passed all four hook checks.
+Roll: `haeyo, ㅋ, ..., long, reaction, question`
 
 ```text
-영하 예보 뜨면 배추보다 무가 먼저예요
-
-무는 0도 근처만 가도 얼어요
-배추는 영하 3~4도까진 버티고요
-
-그래서 무는 영하 되기 전에 미리 캐두고
-배추는 영하 예보 나올 때 겉잎 묶어주면 돼요
-너무 일찍 묶으면 오히려 덜 자라거든요
-
-김장 무 얼리면 진짜 아깝잖아요
+와 마늘 덮는 것도 타이밍이 있대요...
+너무 일찍 덮으면 겨울 오기 전에 싹이 웃자라서
+오히려 언 피해를 입을 수 있대요
+그래서 기온 떨어지는 11월 중순에서 하순쯤 덮는 게 좋다고 하고요
+덮기 전에 뿌리 잘 내렸는지 한 번 보고
+물도 넉넉히 주라네요 ㅋ
+마늘 키우는 분들은 보통 언제 덮으세요?
 ```
 
-The numbers come from local agricultural extension sources (Seoul and Chungnam agricultural technology centers, a vegetable-garden manual); where sources disagree, the most conservative value was used.
+Roll: `banmal_talk, ㅋㅋ, .., short, straight, question`
 
-Then: *"이 글로 이미지 만들어줘"* (image mode). The first line became the headline, and every Korean character was checked before showing it.
+```text
+마늘 너무 일찍 덮으면 오히려 언대..
+싹이 웃자라서 그렇다고 ㅋㅋ
+11월 중순에서 하순쯤 덮는 게 좋대
+다들 벌써 덮었어??
+```
+
+Roll: `banmal_talk, ㅋㅋ, none, short, reaction, reaction`
+
+```text
+아니 마늘 춥다고 일찍 덮어주면 오히려 얼 수 있대
+겨울 오기 전에 싹이 웃자라서 그렇다고
+11월 중순 넘어서 덮으래
+챙겨줘도 뭐라 하네 ㅋㅋ
+```
+
+Facts: covering too early makes sprouts overgrow before winter and freeze; cover in mid to late November; check roots and water first (Icheon Agricultural Technology Center).
+
+### 2. Threads, follower address on
+
+Input: *"I built 3 open-source skills today and they all have 0 stars. Threads post."* Roll: `banmal_talk, ㅋㅋ, .., short, address, reaction`
+
+```text
+스친이들 나 오늘 스레드 글 하나 쓰려다가 오픈소스를 3개 만들어버렸어..
+깃허브 올려놓고 보니까 별이 셋 다 0개 ㅋㅋ
+이게 맞냐고
+```
+
+The star count was checked on GitHub on 2026-11-06.
+
+### 3. Community board, address off, with a hook image
+
+Input: *"병맛 farming post for a community board."* Roll: `banmal_talk, ㅋㅋㅋ, ..., short, address, stop`. The address option is off for community boards, so the opener became `straight`.
+
+```text
+배추도 패딩 입히는 타이밍이 있대 ㅋㅋㅋ
+겉잎 끈으로 묶어주는 게 배추 패딩인데 너무 일찍 입히면 답답해서 덜 큰대...
+그래서 영하 예보 뜰 때 입히는 거래
+무는 0도만 돼도 얼어서 그 전에 캐야 된대
+```
+
+Facts: tie outer leaves when a below-zero forecast comes, since tying too early slows growth; radishes can freeze near 0°C, so pull them first (Seoul agricultural technology center).
+
+Then *"이미지 만들어줘"* (image mode). The first line became the headline; every Korean character was checked.
 
 <p align="center">
-  <img src="assets/examples/farm-hook.jpg" alt="Hook image: frosted field at dawn with a radish in front and tied napa cabbages behind, headline 영하 예보 뜨면 배추보다 무가 먼저" width="360">
+  <img src="assets/examples/cabbage-hook.jpg" alt="Illustration: a napa cabbage with its outer leaves tied like a padded jacket next to a shivering radish, headline 배추도 패딩 입히는 타이밍이 있대" width="360">
 </p>
 
 <p align="center"><sub>AI-generated image (GPT image generation through the Codex CLI). Turn on the platform's AI label when posting it.</sub></p>
+
+### 4. Polish with sponsorship disclosure
+
+Input: a sample draft written for testing, not a real post.
+
+```text
+이번에 OO브랜드에서 보내주셨어요! 써보니까 진짜 좋아서 할께요 추천. 7일 이내에만 무료 반품 가능하대요 ㅋㅋ 체험단으로 받은거에요 #OO브랜드
+```
+
+Output:
+
+```text
+[광고] OO브랜드에서 제품을 무료로 제공받았어요
+
+써보니까 진짜 좋아서 추천할게요
+7일 이내에만 무료 반품 가능하대요 ㅋㅋ
+```
+
+- 보내주셨어요, 체험단, and a brand-name hashtag do not count as disclosure under the Korean FTC guidelines; a clear disclosure went to the first line.
+- 7일 이내에**만** kept: it limits returns to 7 days.
+- 할께요 fixed to 할게요; ㅋㅋ kept.
 
 ## Requirements
 

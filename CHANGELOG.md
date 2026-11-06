@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.4.0 (2026-11-06)
+
+### Added
+- Human texture section in `korean-voice.md`: talking to followers, events in the order they happened, thinking out loud (`..`, `??`), plain feelings, real asks, uneven shape. No fake typos or fake feelings.
+- Draft step 5: leave texture in.
+- Conflicts 24 (crafted structure vs human texture) and 25 (one-question limit vs help posts).
+
 ## v1.3.1 (2026-11-06)
 
 ### Changed

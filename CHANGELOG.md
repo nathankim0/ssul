@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.6.0 (2026-11-06)
+
+### Added
+- Random voice variation with a real random generator (`scripts/roll.py`): register within the pool, ㅋㅋ or none, `..` or none, length, opener, and ending. One roll per post; batches never repeat a roll.
+- `references/variation.md`: what each setting means and what overrides it (user asks, voice profile, tone fit, address option).
+- "다시 굴려" re-rolls the voice for the same content. Conflict 26 and a Variation checklist item.
+
 ## v1.5.0 (2026-11-06)
 
 ### Added

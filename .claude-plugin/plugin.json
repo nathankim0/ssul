@@ -1,6 +1,6 @@
 {
   "name": "ssul",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Write Korean social posts (Threads, X, captions) that read like a real person telling a true story, not like AI. Hooks, storytelling, Korean anti-AI editing, and 구어체 rules in one pass.",
   "author": {
     "name": "nathankim0",

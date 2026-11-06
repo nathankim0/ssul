@@ -114,9 +114,43 @@ skills/ssul/references/
 
 ## Credits
 
-ssul was built by studying these projects. No text was copied; see [ATTRIBUTIONS.md](ATTRIBUTIONS.md).
+ssul was built by installing and running the 16 repositories below on real Korean Threads posts. No text was copied; ideas are credited here and in [ATTRIBUTIONS.md](ATTRIBUTIONS.md).
 
-Burntgogi/ai-slop-thresher · svy04/rutter · sergebulaev/threads-skills · sergebulaev/x-skills · vyralcontent/content-skills · artemnovitckii/content-skills · rediumvex/viral-hooks-skill · coreyhaines31/marketingskills · ScrapeCreators/social-media-research-skills · amondnet/yoonmoon · epoko77-ai/im-not-ai · hjongc/humanizer-kr · leeandev/stop-slop-ko · NomaDamas/k-skill · SorenKK/writing-signature · crazyrookie777/gueoche-guard
+### Hooks and short-form content
+
+| Repository | Skills used | What ssul took |
+|---|---|---|
+| [vyralcontent/content-skills](https://github.com/vyralcontent/content-skills) | `viral-hooks`, `viral-short-form`, `viral-captions-and-ctas`, `viral-short-form-ideas`, `viral-tiktok-content`, `viral-instagram-reels`, `viral-youtube-shorts` | hook batches across archetypes; the promise must match the payoff |
+| [artemnovitckii/content-skills](https://github.com/artemnovitckii/content-skills) | `viral-hooks`, `storytelling`, `anti-ai-writing`, `dumbify` | the four hook killers; "but / so" beats; last line first; hollow vs earned contrast |
+| [rediumvex/viral-hooks-skill](https://github.com/rediumvex/viral-hooks-skill) | `viral-hooks` (100 formulas) | hook triggers grouped by psychology |
+
+### Threads and X
+
+| Repository | Skills used | What ssul took |
+|---|---|---|
+| [sergebulaev/threads-skills](https://github.com/sergebulaev/threads-skills) | `threads-post-writer`, `threads-hook-extractor`, `threads-humanizer` and 5 more | post shapes chosen by goal; story bank; never invent figures; 500-character and one-hashtag limits |
+| [sergebulaev/x-skills](https://github.com/sergebulaev/x-skills) | `x-post-writer`, `x-hook-extractor` and 7 more | short-text hook shapes |
+
+### Korean editing and spoken register
+
+| Repository | Skills used | What ssul took |
+|---|---|---|
+| [Burntgogi/ai-slop-thresher](https://github.com/Burntgogi/ai-slop-thresher) | `ai-slop-thresher`, `thresh` | preserve meaning while editing Korean; never invent experience to sound human |
+| [epoko77-ai/im-not-ai](https://github.com/epoko77-ai/im-not-ai) | `humanize-korean` | Korean AI-tell taxonomy; facts and numbers stay fixed |
+| [amondnet/yoonmoon](https://github.com/amondnet/yoonmoon) | `humanize`, `restyle`, `proofread`, `detect`, `polish-all`, `translate-polish` | humanize, proofread, and restyle kept separate; short SNS text treated as its own case |
+| [hjongc/humanizer-kr](https://github.com/hjongc/humanizer-kr) | `humanizer-kr` | match the writer's own samples |
+| [leeandev/stop-slop-ko](https://github.com/leeandev/stop-slop-ko) | `stop-slop-ko`, `jasoseo` | `~함` is normal in documents but not in posts; interview for real experience before drafting |
+| [NomaDamas/k-skill](https://github.com/NomaDamas/k-skill) | `korean-humanizer`, `korean-slang-writing` | severity levels for Korean AI tells; slang freshness guardrails |
+| [crazyrookie777/gueoche-guard](https://github.com/crazyrookie777/gueoche-guard) | `gueoche` | the general idea of a 구어체 check (no license stated, so nothing was copied) |
+
+### Voice, research, and marketing
+
+| Repository | Skills used | What ssul took |
+|---|---|---|
+| [SorenKK/writing-signature](https://github.com/SorenKK/writing-signature) | `writing-signature` | voice measured from the writer's own texts |
+| [svy04/rutter](https://github.com/svy04/rutter) | `social-media-kr`, `copy-kr` and 27 more | Korean channel context; the feed is the first line |
+| [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | `social`, `copywriting`, `marketing-psychology` and 50 more | social copy and marketing psychology background |
+| [ScrapeCreators/social-media-research-skills](https://github.com/ScrapeCreators/social-media-research-skills) | `outlier-post-finder`, `trend-discovery`, `comment-mining` and 10 more | study posts that outperformed before writing |
 
 ## License
 

@@ -114,9 +114,43 @@ skills/ssul/references/
 
 ## 참고한 프로젝트
 
-아래 프로젝트를 읽고 만들었습니다. 문장은 가져오지 않았습니다. 자세한 내용은 [ATTRIBUTIONS.md](ATTRIBUTIONS.md)에 있습니다.
+아래 16개 저장소를 설치하고 실제 한국어 스레드 글에 돌려보면서 만들었습니다. 문장은 가져오지 않았고, 참고한 아이디어는 여기와 [ATTRIBUTIONS.md](ATTRIBUTIONS.md)에 적었습니다.
 
-Burntgogi/ai-slop-thresher · svy04/rutter · sergebulaev/threads-skills · sergebulaev/x-skills · vyralcontent/content-skills · artemnovitckii/content-skills · rediumvex/viral-hooks-skill · coreyhaines31/marketingskills · ScrapeCreators/social-media-research-skills · amondnet/yoonmoon · epoko77-ai/im-not-ai · hjongc/humanizer-kr · leeandev/stop-slop-ko · NomaDamas/k-skill · SorenKK/writing-signature · crazyrookie777/gueoche-guard
+### 훅과 숏폼 콘텐츠
+
+| 저장소 | 사용한 스킬 | ssul이 가져온 것 |
+|---|---|---|
+| [vyralcontent/content-skills](https://github.com/vyralcontent/content-skills) | `viral-hooks`, `viral-short-form`, `viral-captions-and-ctas`, `viral-short-form-ideas`, `viral-tiktok-content`, `viral-instagram-reels`, `viral-youtube-shorts` | 여러 유형의 훅을 한 번에 뽑기, 첫 줄의 약속과 본문 내용 맞추기 |
+| [artemnovitckii/content-skills](https://github.com/artemnovitckii/content-skills) | `viral-hooks`, `storytelling`, `anti-ai-writing`, `dumbify` | 첫 줄이 죽는 네 가지 이유, "근데/그래서"로 잇는 전개, 마지막 줄 먼저 쓰기, 알맹이 있는 대비와 없는 대비 구분 |
+| [rediumvex/viral-hooks-skill](https://github.com/rediumvex/viral-hooks-skill) | `viral-hooks` (공식 100개) | 심리 유형별로 묶은 훅 |
+
+### 스레드와 X
+
+| 저장소 | 사용한 스킬 | ssul이 가져온 것 |
+|---|---|---|
+| [sergebulaev/threads-skills](https://github.com/sergebulaev/threads-skills) | `threads-post-writer`, `threads-hook-extractor`, `threads-humanizer` 외 5개 | 목표별 글 형식, 스토리 뱅크, 수치 지어내지 않기, 500자·해시태그 1개 제한 |
+| [sergebulaev/x-skills](https://github.com/sergebulaev/x-skills) | `x-post-writer`, `x-hook-extractor` 외 7개 | 짧은 글용 훅 형태 |
+
+### 한국어 윤문과 구어체
+
+| 저장소 | 사용한 스킬 | ssul이 가져온 것 |
+|---|---|---|
+| [Burntgogi/ai-slop-thresher](https://github.com/Burntgogi/ai-slop-thresher) | `ai-slop-thresher`, `thresh` | 한국어를 다듬을 때 뜻 보존하기, 사람처럼 보이려고 경험 지어내지 않기 |
+| [epoko77-ai/im-not-ai](https://github.com/epoko77-ai/im-not-ai) | `humanize-korean` | 한국어 AI 티 분류, 사실과 숫자는 그대로 두기 |
+| [amondnet/yoonmoon](https://github.com/amondnet/yoonmoon) | `humanize`, `restyle`, `proofread`, `detect`, `polish-all`, `translate-polish` | 윤문·교정·문체 변환 분리, 짧은 SNS 글을 따로 다루기 |
+| [hjongc/humanizer-kr](https://github.com/hjongc/humanizer-kr) | `humanizer-kr` | 글쓴이의 실제 글에 말투 맞추기 |
+| [leeandev/stop-slop-ko](https://github.com/leeandev/stop-slop-ko) | `stop-slop-ko`, `jasoseo` | `~함`은 문서에선 정상이지만 SNS 글에선 아님, 초안 전에 인터뷰로 실제 경험 받기 |
+| [NomaDamas/k-skill](https://github.com/NomaDamas/k-skill) | `korean-humanizer`, `korean-slang-writing` | 한국어 AI 티 심각도, 유행어 신선도 기준 |
+| [crazyrookie777/gueoche-guard](https://github.com/crazyrookie777/gueoche-guard) | `gueoche` | 구어체 점검이라는 아이디어 (라이선스가 없어 아무것도 가져오지 않음) |
+
+### 말투, 리서치, 마케팅
+
+| 저장소 | 사용한 스킬 | ssul이 가져온 것 |
+|---|---|---|
+| [SorenKK/writing-signature](https://github.com/SorenKK/writing-signature) | `writing-signature` | 글쓴이 본인의 글로 말투 측정하기 |
+| [svy04/rutter](https://github.com/svy04/rutter) | `social-media-kr`, `copy-kr` 외 27개 | 한국 채널 맥락, 피드는 첫 줄이 전부 |
+| [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | `social`, `copywriting`, `marketing-psychology` 외 50개 | SNS 카피와 마케팅 심리 배경지식 |
+| [ScrapeCreators/social-media-research-skills](https://github.com/ScrapeCreators/social-media-research-skills) | `outlier-post-finder`, `trend-discovery`, `comment-mining` 외 10개 | 쓰기 전에 반응이 튄 글부터 분석하기 |
 
 ## 라이선스
 

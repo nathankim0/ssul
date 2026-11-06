@@ -8,6 +8,7 @@ Run before returning any post. In audit mode, print each failed item with the ex
 - [ ] **Weight test.** No setup, no fake list, no explained joke, no moral.
 - [ ] **Value test.** A stranger gets a usable fact, a feeling they recognize, or a real laugh. No forced jokes, no posts about writing the post.
 - [ ] **Last line.** Quotable on its own. A scene, a quote, or a punchline. Not a lesson, not an aphorism.
+- [ ] **Variation.** Voice settings come from `scripts/roll.py`, with user asks, voice profile, and tone fit applied on top. In a batch, no two posts share the same roll.
 - [ ] **Texture.** Not over-crafted: events in order, plain feelings, real asks allowed; no fake typos, no fake feelings.
 - [ ] **Beats.** Joined by 근데 or 그래서, never "그리고 나서" filler.
 - [ ] **Register.** Chosen from user posts, then feed samples, then the niche default. One register. No 4 identical endings in a row.

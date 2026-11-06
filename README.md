@@ -17,6 +17,7 @@ It merges four kinds of open-source writing skills into one pass and settles the
 - **Hooks**: first-line formulas and the four ways a first line dies
 - **Storytelling**: write the last line first, join beats with "but" and "so"
 - **Korean anti-AI editing**: lesson endings, hollow reversals, 명사화, 번역투, rule-of-three lists
+- **Variation**: ㅋㅋ, register, length, opener, and ending are rolled with a real random generator each time (`scripts/roll.py`), so posts do not all sound the same
 - **Human texture**: talk to followers, tell things in the order they happened, keep `..` and `??`; a post that is too neat reads as AI
 - **Spoken register (구어체)**: endings people actually say, chosen by niche (반말 혼잣말 for AI and dev feeds, 해요체 for daily life), no report words
 
@@ -104,7 +105,7 @@ Then: *"이 글로 이미지 만들어줘"* (image mode). The first line became 
 
 ## Requirements
 
-- Nothing for writing, polishing, and auditing.
+- Python 3 for voice variation (`scripts/roll.py`, standard library only). Without it, ssul picks the voice itself.
 - For image mode: [Codex CLI](https://github.com/openai/codex) with image generation enabled, or an `OPENAI_API_KEY`.
 
 ## Install
@@ -143,6 +144,7 @@ npx skills add nathankim0/ssul
 /ssul 이번 주 뭐 올리지
 /ssul 스친 빼고 다시 써줘
 /ssul 커뮤니티용으로 써줘
+/ssul 다시 굴려
 ```
 
 If you have not given enough real material, ssul asks up to three short questions first. Follower address (스친이들, 인친님들, 트친들) follows the platform and can be turned on or off ("스친 빼고"). Paste two or three of your past posts and it matches your voice; with your OK it saves your voice and stories to `~/.ssul/` so you do not repeat them.
@@ -169,6 +171,8 @@ skills/ssul/references/
   plan.md                         weekly content plan
   profile.md                      bio and pinned post
   short-video.md                  Reels, Shorts, TikTok scripts and captions
+  variation.md                    random voice settings and what overrides them
+skills/ssul/scripts/roll.py       rolls the voice settings (standard library only)
 .claude-plugin/                   Claude Code plugin and marketplace manifests
 ```
 

@@ -61,6 +61,14 @@ Pick the register in this order. The first source that exists wins.
 
 One register per post. Quotes inside the post keep the speaker's register.
 
+**Roll the voice.** Sources 1 to 3 set the range, not one fixed voice. Then roll real random settings so posts do not all sound the same (`references/variation.md`):
+
+```bash
+python3 -I "<skill base directory>/scripts/roll.py" --n <posts> --pool <sns|warm>
+```
+
+The roll picks register within the pool, ㅋㅋ or none, `..` or none, length, opener, and ending. The user's explicit asks, their own voice profile, and tone fit (no ㅋㅋ on serious posts) override the roll. Put the roll in the notes; "다시 굴려" re-rolls.
+
 **Follower address is an option.** Decide it from the request, in this order:
 
 1. The user says so: "스친 넣어서", "스친 빼고", "호칭 없이", "인친님들로".

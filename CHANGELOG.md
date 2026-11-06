@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.4.1 (2026-11-06)
+
+### Fixed
+- Talking to followers (스친이들, 다들) was limited to questions. It now applies in every shape, jokes included, whenever the voice source does it.
+- Humor posts may end on a real question or a plain reaction instead of a crafted punchline.
+
 ## v1.4.0 (2026-11-06)
 
 ### Added

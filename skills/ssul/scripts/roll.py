@@ -21,7 +21,7 @@ POOLS = {
 }
 
 DIMENSIONS = {
-    "laugh": {"none": 35, "ㅋ": 10, "ㅋㅋ": 25, "ㅋㅋㅋ": 20, "ㅎㅎ": 10},
+    "laugh": {"none": 50, "ㅋ": 10, "ㅋㅋ": 20, "ㅋㅋㅋ": 12, "ㅎㅎ": 8},
     "ellipsis": {"none": 40, "..": 40, "...": 20},
     "length": {"short": 35, "medium": 45, "long": 20},
     "opener": {"straight": 40, "reaction": 25, "address": 35},
@@ -42,10 +42,16 @@ def main():
     args = parser.parse_args()
 
     rng = random.Random(args.seed)
+    rolls = []
     for _ in range(max(1, args.n)):
         roll = {"register": pick(rng, POOLS[args.pool])}
         for name, weights in DIMENSIONS.items():
             roll[name] = pick(rng, weights)
+        rolls.append(roll)
+    # In a batch of 3 or more, at least one post has no laugh at all.
+    if len(rolls) >= 3 and all(r["laugh"] != "none" for r in rolls):
+        rng.choice(rolls)["laugh"] = "none"
+    for roll in rolls:
         print(json.dumps(roll, ensure_ascii=False))
 
 

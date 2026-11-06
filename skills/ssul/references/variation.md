@@ -24,11 +24,11 @@ Each line is one post's settings, for example:
 | Setting | Values |
 |---|---|
 | register | `banmal_monologue` (~함, ~임, ~네, ~듯), `banmal_talk` (~야, ~어??, ~더라, ~대), `haeyo` (~요, ~거든요, ~더라고요) |
-| laugh | `none`, `ㅋ`, `ㅋㅋ`, `ㅋㅋㅋ`, `ㅎㅎ`: use it 0 to 2 times in the post, where something is actually funny or awkward |
+| laugh | `none` (about half of all rolls), `ㅋ`, `ㅋㅋ`, `ㅋㅋㅋ`, `ㅎㅎ`: use it 0 to 2 times in the post, where something is actually funny or awkward |
 | ellipsis | `none`, `..`, `...`: trailing-off marks, 0 to 3 times |
 | length | `short` (2 to 4 lines), `medium` (5 to 8), `long` (9 to 12, still under 500 characters) |
 | opener | `straight` (start with the content), `reaction` (아니, 하.., 와, 진짜), `address` (follower address, only if the address option is on; otherwise treat as `straight`) |
-| ending | `question` (a real one), `reaction` (ㅋㅋㅋ, 아니 이게 맞냐고, 흑흑), `stop` (the last fact, no wrap-up) |
+| ending | `question` (a real one), `reaction` (아니 이게 맞냐고, 흑흑; ㅋㅋㅋ only when laugh is not `none`), `stop` (the last fact, no wrap-up) |
 
 ## What overrides the roll
 
@@ -43,7 +43,9 @@ Everything else in ssul still applies: one register per post, the bans (no emoji
 
 ## Several posts at once
 
-With `--n 5`, each post gets its own roll, so a batch never reads like one template. If two rolls come out identical, re-roll the second.
+With `--n 5`, each post gets its own roll, so a batch never reads like one template. If two rolls come out identical, re-roll the second. In a batch of 3 or more, the script makes sure at least one post has no laugh at all.
+
+When the roll says `laugh: none`, the post has no ㅋ, ㅋㅋ, ㅎㅎ, or 흑흑-style laugh at all, even where one would feel natural. Carry the tone with words instead.
 
 ## Notes line
 

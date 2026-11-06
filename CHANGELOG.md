@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.6.1 (2026-11-06)
+
+### Changed
+- Posts with no laugh at all are now about half of all rolls (was about a third).
+- In a batch of 3 or more, at least one post has no laugh.
+- `laugh: none` means no ㅋ, ㅋㅋ, or ㅎㅎ anywhere in the post.
+
 ## v1.6.0 (2026-11-06)
 
 ### Added

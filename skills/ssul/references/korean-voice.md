@@ -37,6 +37,26 @@ Report words to replace: 부각 -> 눈에 띄다, 안착 -> 자리 잡다, 소�
 
 Do not stack the same ending 4 times in a row. Do not vary endings just to vary them.
 
+## Human texture (사람 냄새)
+
+Posts that feel human in the Korean feed are not tight. Over-crafted structure (a hook, a neat contrast, a punchline, nothing out of place) is itself an AI tell. Leave texture in.
+
+| Texture | Looks like |
+|---|---|
+| Talk to followers | 스친이들, 다들, 여러분은 어떻게 해? (when the user really wants to talk to them) |
+| Things in the order they happened | 30분 전에 메일이 온 거야 / 근데 들어가 보니까 진짜 안 되더라고?? / 카드정보 넣고 나니까 정신이 차려져서 |
+| Thinking out loud | `..`, `??`, 하.., 근데, 아 그리고, 물론 내 생각임. 근데 보통 맞음 |
+| Feelings in plain words | 대가리 터질 것 같다, 돈이 살살 녹겠네, 흑흑 |
+| Real asks | 이거 어떻게 해야 돼?, 다들 어디에 홍보해?? |
+| Uneven shape | run-on lines, a list of 2 or 4, no twist, no punchline, an ending that just stops |
+
+Rules:
+
+- Not every post needs a hook formula or a last-line punch. Scene, Confession, and Question posts can simply tell what happened and ask.
+- Use texture the user's material supports. Do not fake feelings the user did not express.
+- Never inject fake typos. Keep the user's own typos and spacing when polishing unless they ask for proofreading.
+- The bans still hold: no emoji, no `·`, no ①, no →.
+
 ## Korean AI tells
 
 Fix every hit. Severity: **S1** always fix, **S2** fix unless it is the user's own voice, **S3** check.

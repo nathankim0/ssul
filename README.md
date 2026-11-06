@@ -17,6 +17,7 @@ It merges four kinds of open-source writing skills into one pass and settles the
 - **Hooks**: first-line formulas and the four ways a first line dies
 - **Storytelling**: write the last line first, join beats with "but" and "so"
 - **Korean anti-AI editing**: lesson endings, hollow reversals, 명사화, 번역투, rule-of-three lists
+- **Human texture**: talk to followers, tell things in the order they happened, keep `..` and `??`; a post that is too neat reads as AI
 - **Spoken register (구어체)**: endings people actually say, chosen by niche (반말 혼잣말 for AI and dev feeds, 해요체 for daily life), no report words
 
 ## Why it exists

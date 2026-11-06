@@ -1,0 +1,20 @@
+# Conflicts between source skills, and how ssul resolves them
+
+ssul was built by running many open-source writing skills together on real Korean Threads posts. They disagree in several places. These are the rulings ssul follows.
+
+| # | Conflict | Ruling |
+|---|---|---|
+| 1 | **Rhythm.** One Threads skill says uniform rhythm wins and never to chop sentences. Storytelling skills say vary sentence length. Korean editing skills say never force variety. Spoken-register checkers ban the same ending 4 times in a row. | Do not manufacture variety. Fix only the audible drone: 4 or more identical sentence endings in a row. Line breaks follow breath, not a pattern. |
+| 2 | **Contrast hooks vs the "not X but Y" ban.** Hook libraries use A-vs-B contrast. Anti-AI skills call "X가 아니라 Y" the top AI tell. | Allowed only when Y is concrete (a number, a scene, a quote) and the post delivers it. Never as the closing line. Vague Y (본질, 마인드셋, 방향성) is always cut. |
+| 3 | **"You" framing vs first-person stories.** Hook audits flag "I" openers as irrelevant to the reader. Story skills say personal stories are first-person by nature. | First person is fine when the moment is one the reader has lived. Do not force "여러분" or "당신". |
+| 4 | **Specificity vs no invention.** Every source says add numbers and names. Every source also says never invent them. | Specifics come only from the user or the conversation. Otherwise use `[brackets]` and say they are placeholders. A plausible invented number is worse than none. |
+| 5 | **Self-questions and CTAs vs engagement bait.** Spoken-register guides recommend a self-question every few paragraphs. Anti-AI skills ban "어떻게 생각하세요? 👇". | At most one question per post. It must be easy to answer (a number, yes or no, the reader's own case). No pointing emoji, no "댓글로 알려주세요" without a reason. |
+| 6 | **Lists vs no bullets.** Korean editing skills ban bullets and bold in prose. Threads formulas use numbered lists. | Use a list only when the content is a list. Plain `1.` lines, no bold, no dashes, no nested items. A daily post is never a list. |
+| 7 | **Register.** Some Korean skills treat `~함` as normal (it is, in documents). Spoken-register skills want 해요체. | Social posts default to 해요체 구어. `~함` only if the user's own posts use it. Never mix registers in one post. |
+| 8 | **Slang vs "do not add what is not there".** Slang skills add trending words for wit. Editing skills forbid adding jokes or tone the author did not write. | Slang only in draft mode and only when the user's voice already uses it. Never inject slang while polishing someone else's text. Slang older than a few months reads as trying too hard. |
+| 9 | **English formulas vs 번역투.** The best hook libraries are English. Translating them word for word produces 번역투. | Borrow the mechanism, rewrite the words. Banned calques: "~하는 사람 99%가 모르는", "게임체인저", "당신은 ~하고 있나요?", "이것은 ~입니다". |
+| 10 | **Structure vs weight.** Viral frameworks add setup, lists, and morals. Users read the result as heavy. | Casual posts skip setup and morals. If the post would work without a line, cut the line. |
+| 11 | **Context.** Drafts built from a long conversation lean on terms only that conversation understands. | Stranger test on every post: zero-context readers must follow every line. |
+| 12 | **Auto-publishing.** Some Threads and X skills publish through APIs. | ssul never publishes. It returns text. Posting is the user's decision. |
+| 13 | **Hashtags.** Sources range from 0 to 5. | 0 or 1, at the end. Threads allows one topic tag. |
+| 14 | **Long reports vs the deliverable.** Audit skills print scores and tables. | Return the post first and at most 3 short notes. Full audits only in audit mode. |

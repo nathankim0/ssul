@@ -1,0 +1,13 @@
+{
+  "name": "ssul",
+  "version": "1.0.0",
+  "description": "Write Korean social posts (Threads, X, captions) that read like a real person telling a true story, not like AI. Hooks, storytelling, Korean anti-AI editing, and 구어체 rules in one pass.",
+  "author": {
+    "name": "nathankim0",
+    "url": "https://github.com/nathankim0"
+  },
+  "homepage": "https://github.com/nathankim0/ssul",
+  "repository": "https://github.com/nathankim0/ssul",
+  "license": "MIT",
+  "keywords": ["korean", "threads", "writing", "humanizer", "hooks", "storytelling", "구어체", "claude-skills"]
+}

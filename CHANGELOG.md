@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.2.0 (2026-11-06)
+
+### Added
+- Image mode: "이미지 만들어줘" generates a 4:5 hook image for the post with GPT image generation through the Codex CLI (OpenAI Images API as fallback). The post's first line becomes the headline; every Korean character is checked before the image is shown; numbers must not claim more than the post.
+- `references/images.md`: spec, prompt template, checks, and output notes (AI label reminder).
+
 ## v1.1.0 (2026-11-06)
 
 ### Added

@@ -63,6 +63,35 @@ Shape: Finding. Register: 반말 혼잣말 (the AI and dev niche default).
 
 Every item was checked during the install, not remembered. That is the point.
 
+### A farming tip, with a hook image
+
+Input: *"A Threads post for farmers, early November, first below-zero days. No personal story; use checked facts."*
+
+Shape: Finding. Register: 해요체 (the daily-life and farming default). First line picked from 3 candidates (number, question, reversal); the reversal passed all four hook checks.
+
+```text
+영하 예보 뜨면 배추보다 무가 먼저예요
+
+무는 0도 근처만 가도 얼어요
+배추는 영하 3~4도까진 버티고요
+
+그래서 무는 영하 되기 전에 미리 캐두고
+배추는 영하 예보 나올 때 겉잎 묶어주면 돼요
+너무 일찍 묶으면 오히려 덜 자라거든요
+
+김장 무 얼리면 진짜 아깝잖아요
+```
+
+The numbers come from local agricultural extension sources (Seoul and Chungnam agricultural technology centers, a vegetable-garden manual); where sources disagree, the most conservative value was used.
+
+Then: *"이 글로 이미지 만들어줘"* (image mode). The first line became the headline, and every Korean character was checked before showing it.
+
+<p align="center">
+  <img src="assets/examples/farm-hook.jpg" alt="Hook image: frosted field at dawn with a radish in front and tied napa cabbages behind, headline 영하 예보 뜨면 배추보다 무가 먼저" width="360">
+</p>
+
+<p align="center"><sub>AI-generated image (GPT image generation through the Codex CLI). Turn on the platform's AI label when posting it.</sub></p>
+
 ## Requirements
 
 - Nothing for writing, polishing, and auditing.

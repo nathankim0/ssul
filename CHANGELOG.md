@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.3.1 (2026-11-06)
+
+### Changed
+- Posts never use emoji, middle dots (`·`), circled numbers (①②③), or Unicode arrows (→). Use commas or 와/랑, plain `1.` numbering, and `->` or words. Added to the Korean AI tells table, the passes, the checklist, formats, images, short video, and conflict 23.
+- Reference docs and examples no longer use these symbols either.
+
 ## v1.3.0 (2026-11-06)
 
 Covers the gaps found when auditing ssul against all 16 source repositories.

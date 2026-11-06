@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.5.0 (2026-11-06)
+
+### Added
+- Follower address option: on or off by request ("스친 빼고", "호칭 없이"), otherwise by target platform (Threads 스친이들, Instagram 인친님들, X 트친들, community boards none), otherwise by the voice source with a note that it can be dropped.
+- Follower address table and natural rewrites when the address is removed (`korean-voice.md`).
+
 ## v1.4.1 (2026-11-06)
 
 ### Fixed

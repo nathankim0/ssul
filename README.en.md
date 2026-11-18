@@ -21,7 +21,7 @@ Running a dozen writing skills together still produced posts that read as AI. Th
 - **Real material first**: never passes invented details off as true. Without material, the post is still ready to paste, and every invented detail is listed in the notes.
 - **Personas**: 2030 Threads users (`sns`), farmers on a farming board (`farmer`), readers in their 40s and up (`midlife`), or a voice built from pasted posts (`custom`). Each has its own endings, flow, first lines, and laugh marks.
 - **Real posts set the voice**: pasted posts are the voice reference even when given only for topics. Their content is never reused.
-- **Random variation**: register, ㅋㅋ, length, opener, and ending come from a real random generator (`roll.py`). Farm posts also roll shape and topic, and `roughen.py` makes spacing, spelling, and line breaks as rough as real posts.
+- **Random variation**: register, ㅋㅋ, length, opener, and ending come from a real random generator (`roll.py`). Farm posts also roll shape, topic, and typing habits (spacing, spelling, line breaks), and the AI writes the post that way from the start.
 - **AI-tell checks**: removes lesson endings, 번역투, 명사화, and emoji, and also catches posts that are cleaner than real ones.
 - **Disclosure**: anything received for the post is stated up front, by Korean FTC rules.
 
@@ -59,90 +59,22 @@ It also does first lines only, replies, blog to thread, multi-post threads, week
 
 ## Examples
 
-### 1. Info post, Threads
+Made with ssul v1.10. These were test runs with no real material, so places, numbers, and people are invented; ssul lists invented details in notes outside the post. Posts are shown exactly as output.
 
-Input: *"Post about when to cover garlic."*
-
-```text
-마늘 너무 일찍 덮으면 오히려 얼 수 있대
-싹이 겨울 오기 전에 웃자라서 그렇다고
-11월 중순에서 하순쯤 덮는 게 좋대
-다들 언제 덮어?
-```
-
-Source of the facts: Icheon Agricultural Technology Center.
-
-### 2. Personal story, Threads address
-
-Input: *"I made 3 open-source skills today and they all have 0 stars."*
-
-```text
-스친이들 나 오늘 스레드 글 하나 쓰려다가 오픈소스를 3개 만들어버렸어..
-깃허브 올려놓고 보니까 별이 셋 다 0개 ㅋㅋ
-이게 맞냐고
-```
-
-The star counts were checked on 2026-11-06.
-
-### 3. Silly community post and hook image
-
-Input: *"A silly farming post for a community board,"* then *"make an image."*
-
-```text
-배추도 패딩 입히는 타이밍이 있대 ㅋㅋㅋ
-겉잎 끈으로 묶어주는 게 배추 패딩인데 너무 일찍 입히면 답답해서 덜 큰대...
-그래서 영하 예보 뜰 때 입히는 거래
-무는 0도만 돼도 얼어서 그 전에 캐야 된대
-```
-
-<p align="center">
-  <img src="assets/examples/cabbage-hook.jpg" alt="Illustration of cabbages tied like padded jackets, headline 배추도 패딩 입히는 타이밍이 있대" width="320">
-</p>
-
-Source of the facts: Seoul Agricultural Technology Center. The image is AI-generated; turn on the platform's AI label when posting.
-
-### 4. Farmer persona, a question post
-
-Input: *"A post for a farming community in a farmer's voice, about November."* This was a test with no real material, so the region, crop, and numbers are all invented, and ssul listed them as invented in its notes.
-
-```text
-안녕하세요.
-강원 홍천에서 단동 비닐하우스 세 동에 시금치 키우고 있습니다.
-
-이번 주말에 눈이 10cm 정도 온다는데 지은 지 15년 넘은 하우스라 불안합니다
-
-지금 버팀목을 세워두는 게 나을지 눈 올 때 밤새 쓸어내리는 게 나을지 궁금합니다
-작년엔 밤새 쓸다가 감기만 얻었네요 ㅎㅎ
-
-
-다들 눈 피해 없으시길 바랍니다
-```
-
-### 5. Polishing a post that needs disclosure
-
-Input (a made-up test draft):
-
-```text
-이번에 OO브랜드에서 보내주셨어요! 써보니까 진짜 좋아서 할께요 추천. 7일 이내에만 무료 반품 가능하대요 ㅋㅋ 체험단으로 받은거에요 #OO브랜드
-```
-
-Result:
-
-```text
-[광고] OO브랜드에서 제품을 무료로 제공받았어요
-
-써보니까 진짜 좋아서 추천할게요
-7일 이내에만 무료 반품 가능하대요 ㅋㅋ
-```
-
-"보내주셨어요" and "체험단" do not count as disclosure under Korean FTC rules, so a clear label went on the first line. "이내에만" (only within) limits the return window, so it stayed; only the spelling of "할께요" was fixed.
+| # | Request | Persona, shape | Output |
+|---|---|---|---|
+| 1 | Threads write-up: things I noticed using AI writing tools | `sns`, hot take, 반말 | 스친이들 AI한테 글 다듬어 달라 하면 내 말버릇이 싹 빠지더라<br>요즘 블로그 초안 넣고 자연스럽게 해달라 하는데<br>돌려받으면 문장은 진짜 매끄러워...<br>근데 내가 맨날 쓰는 "암튼"이 하나도 없어 ㅎㅎ<br>괄호 열고 하던 딴소리도 다 지워져 있고<br>그래서 원본이랑 나란히 놓고 읽어봤거든<br>맞춤법은 AI 쪽이 다 맞아<br>근데 친구한테 보낼 거면 원본 보낼 듯<br>요즘은 맞춤법만 고쳐달라고 해 |
+| 2 | Instagram caption: digging sweet potatoes with my kid | `sns` daily life, log, 반말 | 인친님들 주말에 애랑 할머니네 밭에서 고구마 캤어<br>호미 쥐여줬더니 고구마는 안 캐고 지렁이만 찾더라 ㅋㅋ<br>결국 한 바구니는 내가 다 캠..<br>다들 캔 고구마 바로 먹어 아님 며칠 말려?? |
+| 3 | Farming community post in a farmer's voice, November (1/3) | `farmer`, show, 합니다체 | ☆★서리태 탈곡 했습니다★☆<br><br>오늘 바람이 없어서 서리태 털었습니다.<br><br>두마지기 밭에서 약3가마 정도 나왔습니다 ^^<br><br>올해는 콩알이 굵은데 다들 작황은 어떠신지요? ♧♧♧ |
+| 4 | Same request (2/3) | `farmer`, ask, 합니다체 | 충남 당진에서 꿀고구마 300평 했습니다.<br><br>이번주에 캤는데 껍질에 검은 반점 같은게 올라온게 많습니다...<br><br>밭이물빠짐이안좋아서9월에비많이온게원인인가싶습니다.<br><br>캔지 일주일 정도 됐고 창고에 신문지 깔고 두었습니다.<br><br>무슨 병인지 먹어도 되는지 궁금합니다.<br><br>※판매할 것은 따로 골라놨습니다. |
+| 5 | Same request (3/3) | `farmer`, log, 합니다체 | 안녕하세요♡<br><br>오늘 아침 기온이 영하로 떨어져서 대봉감 땄습니다<br><br>사다리 놓고 남편이랑 둘이 약300개 정도 땄읍니다..<br><br>높은데 달린건 장대로 땄는데 몇일 더 두면 홍시 될 것 같습니다.<br><br>꼭대기 몇개는 까치밥으로 남겨 두었습니다<br><br>담주에는 곶감 깎으려고 합니다. 손은 많이 가도 깎는 일은 즐겁습니다. |
 
 ## Layout
 
 ```text
 skills/ssul/SKILL.md          the skill
 skills/ssul/references/       voice, personas, shapes, hooks, AI tells, disclosure, loaded on demand
-skills/ssul/scripts/          roll.py (random settings), roughen.py (roughens farm and older-reader posts)
+skills/ssul/scripts/          roll.py (random settings)
 .claude-plugin/               plugin manifests
 ```
 

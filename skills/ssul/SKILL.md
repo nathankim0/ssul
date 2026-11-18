@@ -1,12 +1,12 @@
 ---
 name: ssul
-description: Write, polish, or audit Korean social content (Threads and X posts and threads, replies, Instagram captions, Reels/Shorts scripts, bios, hook images) so it reads like a real person telling a true story, not like AI. Use when the user asks for a Threads post, 스레드 글, 바이럴 글, 후킹 글, 일상 글, SNS 글, 썰, 답글, 캡션, 릴스 대본, 프로필, 콘텐츠 계획, wants hooks or an image for a post, pastes viral posts to analyze, wants a blog or video turned into a post, says a draft "AI 같다", "너무 무겁다", "뭔 소린지 모르겠다", or needs sponsorship (광고, 협찬) disclosure. Real material first; hooks, storytelling, Korean anti-AI editing, spoken register, meaning-safe polishing, proofreading, and Korean disclosure rules in one pass.
+description: Write, polish, or audit Korean social content (Threads and X posts and threads, replies, Instagram captions, Reels/Shorts scripts, bios, hook images) so it reads like a real person telling a true story, not like AI. Use when the user asks for a Threads post, 스레드 글, 바이럴 글, 후킹 글, 일상 글, SNS 글, 썰, 답글, 캡션, 릴스 대본, 프로필, 콘텐츠 계획, wants hooks or an image for a post, pastes viral posts to analyze, wants a blog or video turned into a post, writes for farmers or older readers (농민, 농부 말투, 농업 커뮤니티, 중장년), says a draft "AI 같다", "너무 무겁다", "뭔 소린지 모르겠다", or needs sponsorship (광고, 협찬) disclosure. Real material first; hooks, storytelling, Korean anti-AI editing, spoken register, meaning-safe polishing, proofreading, and Korean disclosure rules in one pass.
 argument-hint: "[topic, rough notes, or a draft to fix]"
 ---
 
 # ssul
 
-A post works when a stranger reads the first line, keeps going, understands every line without context, and believes a real person wrote it. This skill gets there in one pass. It merges hook formulas, storytelling, anti-AI editing, and Korean spoken-register rules, and settles the places where those sources disagree (see `references/conflicts.md`).
+A post works when a stranger reads the first line, keeps going, understands every line without context, and believes a real person wrote it. This skill gets there in one pass, for any persona: 2030 Threads users, farmers writing to other farmers, older readers, or a voice built from real samples. It merges hook formulas, storytelling, anti-AI editing, and Korean spoken-register rules, and settles the places where those sources disagree (see `references/conflicts.md`).
 
 The core lesson behind this skill: style passes cannot rescue invented content. A post with a perfect hook and natural 구어체 still reads as AI if the scene, the numbers, and the quote were made up. Real material comes first.
 
@@ -31,7 +31,7 @@ Pick the mode from the request. Do not ask which one.
 
 In image mode, use the current post (draft one first if none exists). Follow `references/images.md`: 4:5 portrait, the first line as the headline, the real subject as the scene, GPT image generation through the Codex CLI, then check every Korean character before showing it.
 
-Every mode uses the same core: real material (Step 1), voice (Step 2), and the passes (Step 6). Out of scope: paid ads, SEO, landing pages, email, and other non-social marketing.
+Every mode uses the same core: real material (Step 1), persona and voice (Step 2), and the passes (Step 6). Out of scope: paid ads, SEO, landing pages, email, and other non-social marketing.
 
 ## Step 0. Load what is already known
 
@@ -51,23 +51,25 @@ Facts in the current conversation count as real material: what the user built, i
 
 If you do not have enough, ask at most 3 short questions from `references/interview.md` in one message. If the user wants a draft anyway, write it with `[brackets]` around every invented detail and say plainly that those parts are placeholders. Never present invented biography, numbers, quotes, or events as true.
 
-## Step 2. Fix the voice
+## Step 2. Fix the persona and the voice
 
-Pick the register in this order. The first source that exists wins.
+**Persona first** (`references/personas.md`): who writes and who reads. `sns` (2030 Threads, X, Instagram), `farmer` (농민, farming communities, mostly 40s to 70s), `midlife` (40s and up, daily life), or `custom` (built from samples). Order: the user names it ("농민 말투", "중장년 대상") -> the voice source -> platform and topic -> `sns`. The persona sets the register range, endings, flow, whether hook formulas apply, laugh marks, the roll pool, and extra AI tells. Name it in the notes.
+
+Then pick the voice in this order. The first source that exists wins.
 
 1. **The user's own posts** (3 or more): note endings, how often they use ㅋㅋ and emoji, line length, openers and closers. Match them.
-2. **Feed samples the user pasted** (other people's posts they want to sound like): match the register most of those posts use, not the polite average.
-3. **The niche default** (`references/korean-voice.md#register-by-niche`): AI, dev, startup, investing, and hot-take posts default to **반말 혼잣말** (`~다`, `~함`, `~임`, `~네`, `~냐`). Daily life, parenting, food, and brand accounts default to **해요체 구어** (`~거든요`, `~더라고요`, `~잖아요`).
+2. **Real posts the user pasted** from the target feed or community, including posts given only "for topic" or as "인기글 참고". They are a voice reference too: measure endings and how often they repeat, laugh and trailing marks, spacing, line length, first and last lines (`references/analyze.md#voice-card`). Take their voice, never their text, numbers, or stories. Skip only when the user says not to follow their voice.
+3. **The persona default** (`references/personas.md`, `references/korean-voice.md#register-by-niche`).
 
-One register per post. Quotes inside the post keep the speaker's register.
+Register follows the voice source. `sns` keeps one register per post; `farmer` and `midlife` may mix 해요체 and 합니다 the way real posts do. Quotes inside the post keep the speaker's register.
 
 **Roll the voice.** Sources 1 to 3 set the range, not one fixed voice. Then roll real random settings so posts do not all sound the same (`references/variation.md`):
 
 ```bash
-python3 -I "<skill base directory>/scripts/roll.py" --n <posts> --pool <sns|warm>
+python3 -I "<skill base directory>/scripts/roll.py" --n <posts> --pool <sns|warm|plain>
 ```
 
-The roll picks register within the pool, ㅋㅋ or none, `..` or none, length, opener, and ending. The user's explicit asks, their own voice profile, and tone fit (no ㅋㅋ on serious posts) override the roll. Put the roll in the notes; "다시 굴려" re-rolls.
+Pool by persona: `sns` -> `sns` (AI, dev, hot takes) or `warm` (2030 daily life); `farmer` and `midlife` -> `plain`. The roll picks register within the pool, laugh marks, trailing marks, length, opener, ending, flow (`turn` or `log`), and whether endings repeat. The user's explicit asks, their own voice profile, and tone fit (no ㅋㅋ on serious posts) override the roll. Put the roll in the notes; "다시 굴려" re-rolls.
 
 **Follower address is an option.** Decide it from the request, in this order:
 
@@ -89,12 +91,16 @@ When the address is removed, rewrite the opening so it still reads naturally; do
 | **One-liner** (한두 줄) | one feeling or one verdict says it all | likes, reposts |
 | **Finding** (발견) | the user tried something and learned facts others can use | saves, reposts |
 | **Hot take** (한마디) | the user has an attitude about a trend: 짜증, 냉소, 자조 | replies, quotes |
+| **Log** (일지) | what the user did today, in order: weather, work, crop or body, a wish or an ask | replies, likes |
 
 Choose by what the material has:
 
 - a real event with a turn -> Scene or Confession
 - facts the reader can use -> Finding or List
 - an attitude -> Hot take or One-liner
+- a day's work or a plain account, with no turn -> Log (the usual shape for `farmer` and `midlife`)
+
+Do not add a turn the material does not have. A Log with no twist is a complete post.
 
 **Do not manufacture humor.** If nothing in the material is actually funny, do not build a punchline. Write the Finding or the attitude instead. Attitude (annoyance, cynicism, self-mockery) carries a post further than a forced joke. Shorter is usually better: a two-line post is a complete post.
 
@@ -103,6 +109,8 @@ Choose by what the material has:
 Format details per shape: `references/formats.md`.
 
 ## Step 4. Write the first line
+
+For `farmer`, `midlife`, and any sample-matched voice whose posts do not open with hooks: start the way the samples start (a plain fact, the weather, a greeting, a question). Hook formulas do not apply; check only Late and Confusing below. For `sns`:
 
 Generate 3 candidates from different triggers (specific number, a quoted line, a confession, a reversal, a question). Formulas: `references/hooks.md`. Check each against the four killers:
 
@@ -115,8 +123,8 @@ Keep the one that passes all four. A first-person line is fine when the moment i
 
 ## Step 5. Draft
 
-1. Write the **last line first**. It should be the line people would quote on its own. A concrete punchline or a real quote beats a lesson.
-2. Fill the middle with beats joined by **근데** (but) or **그래서** (so). If "그리고 나서" fits between two beats, one of them is filler.
+1. Roll `flow: turn` (`sns`): write the **last line first**, the line people would quote on its own. A concrete punchline or a real quote beats a lesson. Fill the middle with beats joined by **근데** or **그래서**; if "그리고 나서" fits between two beats, one is filler.
+2. Roll `flow: log`, or any `farmer` and `midlife` post: tell it in the order it happened, join lines the way the speaker does (~고, ~서, 그리고, 오늘은, 내일은, or nothing), and stop where the samples stop. No 근데 pivot into a realization, no quotable closing line.
 3. Write the way the user would say it to one friend. Line breaks follow breath.
 4. Stay under 500 characters per post (Threads limit). Casual daily posts usually land at 120 to 300.
 5. **Leave texture in** (`references/korean-voice.md#human-texture`): talk to followers whenever the voice source does (in every shape, jokes included), tell things in the order they happened, keep `..` and `??` and plain feelings. A post that is too neat reads as AI.
@@ -130,16 +138,17 @@ Run all of these, in order, on every draft. Details in `references/korean-voice.
 3. **Weight test**: does it read like a report? Cut setup, lists that are not lists, explanations of the joke, and the moral at the end.
 4. **Value test**: what does a stranger get: a fact they can use, a feeling they recognize, or a real laugh? If none, change the shape or the material. Do not polish a post that gives nothing.
 5. **Korean AI tells**: lesson endings, `X가 아니라 Y다` with a vague Y, rule-of-three lists, 명사화 (`진행하다`, `공유드리다`), 번역투 (`당신`, `~하는 것은 중요합니다`), stacked adjectives, em dashes, curly quotes for emphasis, bold, middle dots (`·`), circled numbers (①), Unicode arrows (→; write `->`), emoji.
-6. **Spoken register**: no report words (따라서, 종합하면, 부각, 안착), no 4 identical sentence endings in a row, at most one self-question.
-7. **Platform**: 0 or 1 hashtag, no link in the first post (links go in the first reply, `references/threads.md`), no emoji, ends without engagement bait.
-8. **Disclosure**: if the user received anything for the post (money, product, discount, points, commission), the first part of the post says so in Korean, by Korean FTC rules (`references/disclosure.md`). If a product or service is recommended and you do not know, ask. Realistic AI people or images are labeled.
-9. **Meaning and spelling** (polish mode, and before any output): negation, conditions, limits (`만`, `까지`, `이내`), numbers, and the author's claims are unchanged; clear spelling and spacing errors are fixed without "correcting" intentional casual style (`references/polish.md`).
+6. **Spoken register**: no report words (따라서, 종합하면, 부각, 안착), at most one self-question. Endings follow the voice source and the roll: repetition is allowed, and endings spread so each is used once are an AI tell. Do not vary endings to vary them.
+7. **Too clean**: compare the draft to the voice source. Every pass above removes things; this one checks the other direction. If the draft is smoother, more precise, or more connected than the real posts (a turn they never make, numbers sharper than the material, perfect spacing they do not have, young endings in an older voice), roughen it to match. Persona tells: `references/personas.md`. Never invent typos or feelings.
+8. **Platform**: 0 or 1 hashtag, no link in the first post (links go in the first reply, `references/threads.md`), no emoji unless the voice source's real posts use them, ends without engagement bait.
+9. **Disclosure**: if the user received anything for the post (money, product, discount, points, commission), the first part of the post says so in Korean, by Korean FTC rules (`references/disclosure.md`). If a product or service is recommended and you do not know, ask. Realistic AI people or images are labeled.
+10. **Meaning and spelling** (polish mode, and before any output): negation, conditions, limits (`만`, `까지`, `이내`), numbers, and the author's claims are unchanged; clear spelling and spacing errors are fixed without "correcting" intentional casual style (`references/polish.md`).
 
 ## Output
 
 Draft and polish modes return the post first, then at most 3 short lines:
 
-- the shape and why
+- the persona and shape, and why
 - what is real and what is a placeholder
 - one thing the user should check before posting
 

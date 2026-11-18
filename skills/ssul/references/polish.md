@@ -40,7 +40,7 @@ Fix clear errors in standard Korean spelling and spacing. Common ones:
 | 왠지 / 웬일 | 왠지 (왜인지), 웬일 (어찌 된 일) |
 | dependent nouns | 할 수 있다, 한 지 3년, 먹을 거야 (spaced) |
 
-Do **not** "correct" the post's intentional casual style: ㅋㅋ, ㅠㅠ, 반말 contractions (했음, 그럼, 근데), deliberate fragments, internet spellings the author uses on purpose (ㄹㅇ, 개웃김). In doubt, leave it and mention it in one line.
+Do **not** "correct" the post's intentional casual style: ㅋㅋ, ㅠㅠ, 반말 contractions (했음, 그럼, 근데), deliberate fragments, internet spellings the author uses on purpose (ㄹㅇ, 개웃김). In doubt, leave it and mention it in one line. For `farmer` and `midlife` voices, loose spacing, no period at line end, `~~`, `^^`, and mixed 해요체 and 합니다 are style too; fix only errors that change or block the meaning unless the user asked for 맞춤법.
 
 ## 4. Report
 

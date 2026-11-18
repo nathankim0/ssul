@@ -2,13 +2,15 @@
 
 ## Register by niche
 
-Use this only when the user gave no samples of their own posts and no feed samples.
+Use this only when the user gave no samples of their own posts and no feed samples. Samples always win. The persona (`personas.md`) decides which rows apply.
 
 | Niche | Default register | Endings | Feel |
 |---|---|---|---|
 | AI, dev, startup, investing, tech news, hot takes | **반말 혼잣말** | `~다`, `~함`, `~임`, `~네`, `~냐`, `~듯`, bare nouns | talking to yourself in public; attitude shows |
 | daily life, parenting, food, travel, pets | **해요체 구어** | `~거든요`, `~더라고요`, `~잖아요`, `~죠`, `~네요` | telling a friend |
 | brand or business accounts | **해요체 구어**, lighter on ㅋㅋ | same | friendly, not cute |
+| farming, rural life, farming communities (`farmer`) | **plain 해요체**, 합니다 mixed in | `~했어요`, `~했네요`, `~같아요`, `~합니다`, `~습니다`, repeated | writing to other farmers; practical, in order |
+| 40s and up, daily life (`midlife`) | **plain 해요체**, 합니다 mixed in | same as farming | a plain account, greetings allowed |
 
 반말 혼잣말 example (two lines is a full post):
 
@@ -19,7 +21,9 @@ Use this only when the user gave no samples of their own posts and no feed sampl
 
 Write it the way the user would actually say it, in the register chosen above.
 
-Useful endings, mixed naturally:
+The table below is the `sns` persona's 해요체: smooth, young, conversational. For `farmer` and `midlife`, ~거든요, ~더라고요, ~잖아요 are rare; use the plain endings in the niche table above, or what the samples use.
+
+Useful endings for `sns`, mixed naturally:
 
 | Ending | Job | Example |
 |---|---|---|
@@ -35,7 +39,7 @@ Spoken connectors: 근데, 그래서, 그러니까, 아니, 결국, 막상. Repo
 
 Report words to replace: 부각 -> 눈에 띄다, 안착 -> 자리 잡다, 소진 -> 다 떨어지다, 분기점 -> 갈림길, 괴리 -> 차이, 촉발 -> 시작되다, 진행하다 -> just the verb, 공유드리다 -> 보내다 / 말하다.
 
-Do not stack the same ending 4 times in a row. Do not vary endings just to vary them.
+Endings follow the voice source and the roll's `endings` setting. Real posts repeat endings (했어요 / 했어요 / 했네요); that is not a flaw. Do not vary endings just to vary them: endings spread so that each one appears once is an AI tell. Only the `sns` persona with `endings: mixed` treats 4 or more identical endings in a row as a drone to fix.
 
 ## Human texture (사람 냄새)
 
@@ -57,7 +61,7 @@ Rules:
 - Not every post needs a hook formula or a last-line punch. Scene, Confession, and Question posts can simply tell what happened and ask.
 - Use texture the user's material supports. Do not fake feelings the user did not express.
 - Never inject fake typos. Keep the user's own typos and spacing when polishing unless they ask for proofreading.
-- The bans still hold: no emoji, no `·`, no ①, no →.
+- The bans still hold: no emoji (unless the voice source uses them), no `·`, no ①, no →.
 
 ## Follower address
 
@@ -100,9 +104,23 @@ Fix every hit. Severity: **S1** always fix, **S2** fix unless it is the user's o
 | S3 | Em dash, en dash | — | period or comma |
 | S3 | Curly quotes or single quotes for emphasis | '진짜' | remove the quotes |
 | S3 | Bold, headers, bullets in a casual post | | plain lines |
-| S3 | 음슴체 in a 해요체 post | ~함, ~됨 | match the post's register |
+| S3 | 음슴체 in a 해요체 post | ~함, ~됨 | match the post's register (`farmer` and `midlife` may mix 해요체 and 합니다) |
 
-No single word proves AI authorship. These are edit points, not a detector score.
+### Too clean
+
+Every tell above is something to remove. These are the opposite: the post is cleaner than a real person would write. Check them against the voice source; the more the samples are rough, the more these matter. Persona-specific ones are in `personas.md`.
+
+| Sev | Tell | Example | Fix |
+|---|---|---|---|
+| S2 | Precision beyond the material | 오전 6시 47분, 영하 2.3도 when the user said "새벽", "영하" | the precision the material has, said the way the speaker says it |
+| S2 | Every beat connected | 근데 / 그래서 / 결국 between every line | the speaker's own joins, or none |
+| S2 | A turn the material lacks | an observation recast as a realization (근데 ~게 이제 확실해요) | tell what happened |
+| S2 | Evenly spread endings | each sentence ends differently | let the voice source's endings repeat |
+| S2 | Nothing off-topic | every line serves the point | keep the user's asides |
+| S3 | Spacing and punctuation cleaner than the samples | perfect spacing and periods when the samples use neither | mirror habits found in at least half the samples; never invent typos |
+| S3 | Vocabulary above the speaker | literary or written words in a plain voice | the words the samples use |
+
+No single word proves AI authorship. A post can fail by being too rough for its voice as easily as too clean; the voice source is the measure. These are edit points, not a detector score.
 
 ## Slang
 

@@ -7,12 +7,12 @@ Use when the user wants a Reels, Shorts, or TikTok script, on-screen text, or a 
 The hook has three layers, all landing at once:
 
 1. **Visual**: the first frame already shows the subject or the result (the radish in the frost, the before and after). Never a logo or a greeting.
-2. **Spoken line**: the first line from `hooks.md`, said in under 2 seconds.
+2. **Spoken line**: the first line from `hooks.md` (`sns`), or the way the persona's samples start (`farmer`, `midlife`; `personas.md`), said in under 2 seconds.
 3. **On-screen text**: 3 to 7 words, readable with sound off. Most people watch muted.
 
 ## Script
 
-- Write the last line first, then beats joined by 근데 / 그래서 (same as posts).
+- Same flow as posts: `flow: turn` writes the last line first, then beats joined by 근데 / 그래서; `flow: log` (and every `farmer` and `midlife` script) tells it in order with no added turn.
 - Spoken Korean, not written: the endings people actually say, short sentences.
 - Read it aloud with a timer. Cut beats, not the hook or the last line, until it fits the target length.
 - Format per line: `[visual] / spoken line / on-screen text`.

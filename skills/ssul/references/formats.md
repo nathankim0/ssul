@@ -1,6 +1,6 @@
 # Shapes
 
-Pick by what the material has: an event with a turn (Scene, Confession), usable facts (Finding, List), or an attitude (Hot take, One-liner).
+Pick by what the material has: an event with a turn (Scene, Confession), usable facts (Finding, List), an attitude (Hot take, One-liner), or a day told in order (Log). Do not add a turn the material does not have.
 
 ## Scene (장면) (likes)
 First line drops the reader into the moment. Two to four beats joined by 근데 or 그래서. Ends on a quote, an image, or a small punchline.
@@ -60,6 +60,16 @@ The user tried something and learned facts others can use. Title line says what 
 ## Hot take (한마디) (replies, quotes)
 An attitude about a trend: 짜증, 냉소, 자조. Name the trend concretely, give the user's reaction, stop. Self-mockery lands better than mocking others; never target a named private person.
 
+## Log (일지) (replies, likes)
+The day in order: the weather or the date, what was done, how the crop, the animals, or the body is, then a worry, a wish, an ask, or a greeting. No hook, no turn, no punchline. The usual shape for `farmer` and `midlife` (`personas.md`), and fine for anyone with `flow: log`. Endings may repeat; asides stay in.
+
+Placeholders, not a real post:
+
+> [어제 비 와서] 오늘 [배추밭] 약 쳤어요
+> [오후엔 바람] 불어서 [반]만 했네요
+> 내일 [마저] 하려고요
+> [무름병] 도는 데 있다던데 다들 괜찮으세요
+
 ## Threads limits
 - 500 characters per post. Split into a thread only when each post can stand alone.
-- 0 or 1 hashtag. No link in the first post. No emoji, middle dots, circled numbers, or Unicode arrows.
+- 0 or 1 hashtag. No link in the first post. No emoji (unless the voice source uses them), middle dots, circled numbers, or Unicode arrows.

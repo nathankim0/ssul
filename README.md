@@ -20,6 +20,7 @@ It merges four kinds of open-source writing skills into one pass and settles the
 - **Variation**: ㅋㅋ, register, length, opener, and ending are rolled with a real random generator each time (`scripts/roll.py`), so posts do not all sound the same
 - **Human texture**: talk to followers, tell things in the order they happened, keep `..` and `??`; a post that is too neat reads as AI
 - **Spoken register (구어체)**: endings people actually say, chosen by niche (반말 혼잣말 for AI and dev feeds, 해요체 for daily life), no report words
+- **Personas**: 2030 Threads users (`sns`), farmers writing to other farmers (`farmer`), readers in their 40s and up (`midlife`), or a voice built from real posts (`custom`). Each sets its own endings, flow, hooks, and laugh marks; posts you paste, even for topics, become the voice reference
 
 ## Why it exists
 
@@ -51,10 +52,11 @@ Every post goes through these checks:
 3. **Weight test**: no setup, no fake lists, no morals
 4. **Value test**: a stranger gets a usable fact, a recognizable feeling, or a real laugh; no forced jokes
 5. **Korean AI tells**, graded S1 to S3, including emoji, middle dots (`·`), circled numbers (①), and Unicode arrows (→)
-6. **Spoken register**: no 4 identical endings in a row, no report words
-7. **Platform**: under 500 characters, 0 or 1 hashtag, at most one question
-8. **Disclosure**: anything received for the post is stated up front, in Korean, by Korean FTC rules (광고, 협찬)
-9. **Meaning and spelling**: negation, conditions, and numbers unchanged when polishing; clear spelling errors fixed, casual style kept
+6. **Spoken register**: no report words; endings follow the voice source, repeats allowed, never spread evenly
+7. **Too clean**: not smoother, more precise, or more connected than real posts in that voice
+8. **Platform**: under 500 characters, 0 or 1 hashtag, at most one question
+9. **Disclosure**: anything received for the post is stated up front, in Korean, by Korean FTC rules (광고, 협찬)
+10. **Meaning and spelling**: negation, conditions, and numbers unchanged when polishing; clear spelling errors fixed, casual style kept
 
 ## Examples
 
@@ -197,21 +199,23 @@ npx skills add nathankim0/ssul
 /ssul 이번 주 뭐 올리지
 /ssul 스친 빼고 다시 써줘
 /ssul 커뮤니티용으로 써줘
+/ssul 농민 말투로 써줘: <notes>
+/ssul 이 인기글들 말투로 써줘: <posts> <notes>
 /ssul 다시 굴려
 ```
 
-If you have not given enough real material, ssul asks up to three short questions first. Follower address (스친이들, 인친님들, 트친들) follows the platform and can be turned on or off ("스친 빼고"). Paste two or three of your past posts and it matches your voice; with your OK it saves your voice and stories to `~/.ssul/` so you do not repeat them.
+If you have not given enough real material, ssul asks up to three short questions first. Follower address (스친이들, 인친님들, 트친들) follows the platform and can be turned on or off ("스친 빼고"). Say who it is for ("농민 말투", "중장년 대상") to switch persona. Paste two or three of your past posts, or real posts from the community you write for, and it matches that voice; with your OK it saves your voice and stories to `~/.ssul/` so you do not repeat them.
 
 ## Repository layout
 
 ```text
 skills/ssul/SKILL.md              the skill
 skills/ssul/references/
-  conflicts.md                    22 contradictions between source skills, and the rulings
+  conflicts.md                    31 contradictions between source skills, and the rulings
   hooks.md                        first-line triggers and killers, written in Korean
   korean-voice.md                 구어체 endings and Korean AI tells (S1 to S3)
   interview.md                    questions for getting real material
-  formats.md                      scene, confession, reversal, list, question, one-liner, finding, hot take
+  formats.md                      scene, confession, reversal, list, question, one-liner, finding, hot take, log
   checklist.md                    final pass and audit format
   images.md                       hook image spec, generation prompt, and checks
   disclosure.md                   Korean sponsorship and AI disclosure rules
@@ -225,6 +229,7 @@ skills/ssul/references/
   profile.md                      bio and pinned post
   short-video.md                  Reels, Shorts, TikTok scripts and captions
   variation.md                    random voice settings and what overrides them
+  personas.md                     sns, farmer, midlife, and custom personas
 skills/ssul/scripts/roll.py       rolls the voice settings (standard library only)
 .claude-plugin/                   Claude Code plugin and marketplace manifests
 ```

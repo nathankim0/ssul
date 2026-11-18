@@ -12,9 +12,10 @@ Ask at most 3 questions in one message. Pick the ones whose answers are missing.
 ## Purpose questions
 - 읽는 사람이 웃었으면 해요, 공감했으면 해요, 댓글 달았으면 해요?
 - 이 계정은 주로 누가 봐요? (동료, 친구, 같은 업계, 모르는 사람)
+- 누가 쓰는 글처럼 보여야 해요? (2030 스레드, 농사짓는 분, 중장년)
 
 ## Voice questions
-- 예전에 반응 좋았던 글 2~3개만 붙여줄 수 있어요?
+- 예전에 반응 좋았던 글 2~3개만 붙여줄 수 있어요? 내 글이 아니어도 읽을 사람들이 실제로 쓴 글이면 돼요
 - 평소에 반말로 써요, 존댓말로 써요?
 
 ## Mining the conversation first

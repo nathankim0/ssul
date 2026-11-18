@@ -22,7 +22,10 @@ Build from 3 or more of the user's own posts. Measure, do not guess:
 updated: YYYY-MM-DD
 samples: N posts
 
-register: 반말 혼잣말 | 해요체 | ...
+persona: sns | farmer | midlife | custom
+register: 반말 혼잣말 | 해요체 | 해요체 + 합니다 | ...
+ending repetition: e.g. same ending 3 or more in a row in N of 10 posts
+flow: turn | log (in order, no turn)
 endings (most used): ~다 40%, ~함 25%, ~네 15%, ...
 ㅋㅋ: in about N of 10 posts
 emoji: none | rare | often (which ones)

@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.7.0 (2026-11-18)
+
+### Added
+- Personas (`references/personas.md`): `sns` (2030 Threads, X, Instagram; every earlier rule unchanged), `farmer` (farmers writing to other farmers), `midlife` (40s and up), and `custom` (built from real posts). The persona sets register, endings, flow, hooks, laugh marks, emoji, and the roll pool. Picked from the user's words ("농민 말투", "중장년 대상"), then the voice source, then platform and topic.
+- `plain` roll pool for `farmer` and `midlife`: plain 해요체, 해요체 with 합니다, or a diary voice; `^^` and `~~`; weather openers; wish and greeting endings; always `flow: log`.
+- New roll settings in every pool: `flow` (`turn` or `log`) and `endings` (`repeat` or `mixed`).
+- Log (일지) shape: the day in order, no hook, no turn, no punchline.
+- Too clean pass and AI tells: precision beyond the material, every beat connected, an added realization turn, evenly spread endings, nothing off-topic, spacing cleaner than the samples. The voice source is the measure in both directions.
+- Voice card in analyze mode: pasted posts are measured (endings, repeats, laugh, spacing, first and last lines) and used as the voice source.
+- Conflicts 27 to 31.
+
+### Changed
+- Pasted posts are a voice reference even when given only for topics; their text, numbers, and stories are still never reused.
+- Hook formulas and last-line-first storytelling apply to `sns` and `flow: turn` only.
+- The "no 4 identical endings in a row" rule is gone except for `sns` with `endings: mixed`. Repeated endings are allowed; evenly spread endings are flagged.
+- `farmer` and `midlife` may mix 해요체 and 합니다 in one post. Emoji are allowed only when the voice source's real posts use them.
+- Polish keeps loose spacing, `~~`, and `^^` as style for `farmer` and `midlife` voices.
+
 ## v1.6.1 (2026-11-06)
 
 ### Changed

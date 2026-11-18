@@ -24,6 +24,26 @@ One short summary:
 - typical length
 - what the user's material would need to fit in (e.g. "a number from your own test", "an attitude about a trend")
 
+## Voice card
+
+Pasted posts are a voice reference even when the user pasted them for topics (SKILL.md Step 2). Measure them, do not guess, and write a short card that Step 2 uses as the voice source:
+
+```text
+persona: sns | farmer | midlife | custom
+register: e.g. 해요체 18/20, 합니다 lines in 7 of 20
+top endings: e.g. ~했어요, ~네요, ~같아요; same ending 3 or more in a row in 9 of 20
+laugh: none in 12, ㅎㅎ in 5, ^^ in 3, ㅋㅋ in 0
+trailing marks: .. in 8, ~~ in 4
+emoji: none | rare | often (which)
+spacing and periods: e.g. no period at line end in 14 of 20
+first lines: e.g. weather 6, today's work 9, question 5
+last lines: e.g. wish 6, ask 7, greeting 4, just stops 3
+turns (근데 pivot to a realization): e.g. 2 of 20
+length: lines and characters, median and range
+```
+
+Use the card for the voice only. Never reuse a sample's text, numbers, or story.
+
 ## Then
 
 Offer 1 to 3 post ideas that use the user's real material in those shapes. If the user has no matching material, say what material would be needed instead of inventing it.

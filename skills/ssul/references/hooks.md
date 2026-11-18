@@ -1,5 +1,7 @@
 # First lines
 
+These formulas are for the `sns` persona. For `farmer`, `midlife`, and sample-matched voices whose posts do not open with hooks, start the way the samples start (a plain fact, the weather, a greeting, a question) and check only Late and Confusing (`personas.md`).
+
 Pick 3 candidates from different triggers, run the four killers (late, confusing, not mine, flat), keep the best. Fill every slot with real material. Korean wording below is written for Korean, not translated.
 
 ## Triggers

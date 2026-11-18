@@ -11,7 +11,7 @@ skills/ssul/SKILL.md            the skill (entry point)
 skills/ssul/references/*.md     loaded on demand by SKILL.md
 .claude-plugin/plugin.json      plugin manifest (holds the version)
 .claude-plugin/marketplace.json marketplace manifest (holds the version)
-README.md / README.ko.md        English and Korean docs; keep them in sync
+README.md / README.en.md        Korean (default) and English docs; keep them in sync
 assets/banner.png               README hero image
 CHANGELOG.md                    one entry per release
 ATTRIBUTIONS.md                 credits to source projects
@@ -30,7 +30,7 @@ ATTRIBUTIONS.md                 credits to source projects
      gh release create vX.Y.Z --title "vX.Y.Z" --notes-file <notes>
      ```
 3. **Docs-only changes do not release.** README edits, `AGENTS.md`, `ATTRIBUTIONS.md`, images, and typo fixes are committed and pushed with no version bump, tag, or release.
-4. **Keep READMEs in sync.** Any change to `README.md` gets the same change in `README.ko.md`, and the reverse.
+4. **Keep READMEs in sync.** Any change to `README.md` (Korean, the default) gets the same change in `README.en.md`, and the reverse. Keep them short; at most 5 examples.
 5. **Validate before committing** a distribution change: `claude plugin validate .` must pass.
 
 ## Writing rules for the skill itself

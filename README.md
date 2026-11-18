@@ -20,7 +20,7 @@ It merges four kinds of open-source writing skills into one pass and settles the
 - **Variation**: ㅋㅋ, register, length, opener, and ending are rolled with a real random generator each time (`scripts/roll.py`), so posts do not all sound the same
 - **Human texture**: talk to followers, tell things in the order they happened, keep `..` and `??`; a post that is too neat reads as AI
 - **Spoken register (구어체)**: endings people actually say, chosen by niche (반말 혼잣말 for AI and dev feeds, 해요체 for daily life), no report words
-- **Personas**: 2030 Threads users (`sns`), farmers writing to other farmers (`farmer`), readers in their 40s and up (`midlife`), or a voice built from real posts (`custom`). Each sets its own endings, flow, hooks, and laugh marks; posts you paste, even for topics, become the voice reference
+- **Personas**: 2030 Threads users (`sns`), farmers on a farming board (`farmer`: 합니다체, questions with context, photo captions, long essays), readers in their 40s and up (`midlife`), or a voice built from real posts (`custom`). Each sets its own endings, flow, hooks, and laugh marks; posts you paste, even for topics, become the voice reference
 
 ## Why it exists
 
@@ -47,7 +47,7 @@ So ssul does one thing first: it gets **real material** from you or from the con
 
 Every post goes through these checks:
 
-1. **Truth**: every number, name, quote, and event is real, or marked `[like this]` as a placeholder
+1. **Truth**: every number, name, quote, and event is real, or listed in the notes as invented; the post itself has no brackets and can be pasted as is
 2. **Stranger test**: someone with zero context understands every line
 3. **Weight test**: no setup, no fake lists, no morals
 4. **Value test**: a stranger gets a usable fact, a recognizable feeling, or a real laugh; no forced jokes

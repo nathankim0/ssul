@@ -49,7 +49,7 @@ Before writing, you need at least three of these, from the user or from facts al
 
 Facts in the current conversation count as real material: what the user built, installed, said, or asked. Use them. They are often the best source available.
 
-If you do not have enough, ask at most 3 short questions from `references/interview.md` in one message. If the user wants a draft anyway, write it with `[brackets]` around every invented detail and say plainly that those parts are placeholders. Never present invented biography, numbers, quotes, or events as true.
+If you do not have enough, ask at most 3 short questions from `references/interview.md` in one message. If the user wants a draft anyway (or asked for several posts, or cannot answer), write it. The post is always ready to paste: no `[brackets]`, no markup. Write invented details in plainly, then list every one of them in the notes (`지어낸 부분: ...`) so the user can swap in what really happened. Never tell the user an invented detail is real.
 
 ## Step 2. Fix the persona and the voice
 
@@ -61,15 +61,15 @@ Then pick the voice in this order. The first source that exists wins.
 2. **Real posts the user pasted** from the target feed or community, including posts given only "for topic" or as "인기글 참고". They are a voice reference too: measure endings and how often they repeat, laugh and trailing marks, spacing, line length, first and last lines (`references/analyze.md#voice-card`). Take their voice, never their text, numbers, or stories. Skip only when the user says not to follow their voice.
 3. **The persona default** (`references/personas.md`, `references/korean-voice.md#register-by-niche`).
 
-Register follows the voice source. `sns` keeps one register per post; `farmer` and `midlife` may mix 해요체 and 합니다 the way real posts do. Quotes inside the post keep the speaker's register.
+Register follows the voice source. `sns` keeps one register per post; `farmer` writes on a 합니다체 base with ~네요 or 해요체 lines mixed in; `midlife` may mix 해요체 and 합니다. Quotes inside the post keep the speaker's register.
 
 **Roll the voice.** Sources 1 to 3 set the range, not one fixed voice. Then roll real random settings so posts do not all sound the same (`references/variation.md`):
 
 ```bash
-python3 -I "<skill base directory>/scripts/roll.py" --n <posts> --pool <sns|warm|plain>
+python3 -I "<skill base directory>/scripts/roll.py" --n <posts> --pool <sns|warm|farm|plain>
 ```
 
-Pool by persona: `sns` -> `sns` (AI, dev, hot takes) or `warm` (2030 daily life); `farmer` and `midlife` -> `plain`. The roll picks register within the pool, laugh marks, trailing marks, length, opener, ending, flow (`turn` or `log`), and whether endings repeat. The user's explicit asks, their own voice profile, and tone fit (no ㅋㅋ on serious posts) override the roll. Put the roll in the notes; "다시 굴려" re-rolls.
+Pool by persona: `sns` -> `sns` (AI, dev, hot takes) or `warm` (2030 daily life); `farmer` -> `farm`; `midlife` -> `plain`. The roll picks register within the pool, laugh marks, trailing marks, length, opener, ending, flow (`turn` or `log`), and whether endings repeat. The user's explicit asks, their own voice profile, and tone fit (no ㅋㅋ on serious posts) override the roll. Put the roll in the notes; "다시 굴려" re-rolls.
 
 **Follower address is an option.** Decide it from the request, in this order:
 
@@ -92,6 +92,7 @@ When the address is removed, rewrite the opening so it still reads naturally; do
 | **Finding** (발견) | the user tried something and learned facts others can use | saves, reposts |
 | **Hot take** (한마디) | the user has an attitude about a trend: 짜증, 냉소, 자조 | replies, quotes |
 | **Log** (일지) | what the user did today, in order: weather, work, crop or body, a wish or an ask | replies, likes |
+| **Ask, Photo caption, Essay, Notice** | farming boards: a question with context, a caption for the attached photo, a long wandering post, selling the user's own produce (`references/formats.md`) | replies |
 
 Choose by what the material has:
 
@@ -126,14 +127,14 @@ Keep the one that passes all four. A first-person line is fine when the moment i
 1. Roll `flow: turn` (`sns`): write the **last line first**, the line people would quote on its own. A concrete punchline or a real quote beats a lesson. Fill the middle with beats joined by **근데** or **그래서**; if "그리고 나서" fits between two beats, one is filler.
 2. Roll `flow: log`, or any `farmer` and `midlife` post: tell it in the order it happened, join lines the way the speaker does (~고, ~서, 그리고, 오늘은, 내일은, or nothing), and stop where the samples stop. No 근데 pivot into a realization, no quotable closing line.
 3. Write the way the user would say it to one friend. Line breaks follow breath.
-4. Stay under 500 characters per post (Threads limit). Casual daily posts usually land at 120 to 300.
+4. On Threads, stay under 500 characters per post; casual daily posts usually land at 120 to 300. On community boards, length follows the samples and the roll (one line to an essay).
 5. **Leave texture in** (`references/korean-voice.md#human-texture`): talk to followers whenever the voice source does (in every shape, jokes included), tell things in the order they happened, keep `..` and `??` and plain feelings. A post that is too neat reads as AI.
 
 ## Step 6. Run the passes
 
 Run all of these, in order, on every draft. Details in `references/korean-voice.md` and `references/checklist.md`.
 
-1. **Truth**: every number, name, quote, and event is real or bracketed.
+1. **Truth**: every number, name, quote, and event is real or listed in the notes as invented. No brackets in the post.
 2. **Stranger test**: someone with zero context understands every line. Replace insider words ("윤문 스킬", project names, inside jokes) with plain words. If you need the conversation to understand the post, it fails.
 3. **Weight test**: does it read like a report? Cut setup, lists that are not lists, explanations of the joke, and the moral at the end.
 4. **Value test**: what does a stranger get: a fact they can use, a feeling they recognize, or a real laugh? If none, change the shape or the material. Do not polish a post that gives nothing.
@@ -149,8 +150,12 @@ Run all of these, in order, on every draft. Details in `references/korean-voice.
 Draft and polish modes return the post first, then at most 3 short lines:
 
 - the persona and shape, and why
-- what is real and what is a placeholder
+- what is real, and every invented detail by name (`지어낸 부분: 서른 포기, 공판장, ...`)
 - one thing the user should check before posting
+
+The post itself is clean text the user can copy and paste as is: no brackets, no labels, no quote marks around it.
+
+**Never reuse the references' examples.** Example posts and fragments in `references/` show a shape, not content. Do not reuse their topics, wording, numbers, body parts, sign-offs, or line order. In a batch, each post differs in topic details, opener, and closer, not only in the roll.
 
 Do not attach long reports, tables, or scores unless asked. The user asked for a post.
 

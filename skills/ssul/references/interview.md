@@ -31,4 +31,4 @@ Quote these accurately. Shorten, do not embellish.
 
 ## When the user refuses to give material
 
-Write the draft with `[brackets]` around every invented detail, and say in one line that the brackets must be replaced with real details before posting.
+Write the draft as paste-ready text with no brackets. List every invented detail in the notes, and say in one line that they should be swapped for what really happened before posting.

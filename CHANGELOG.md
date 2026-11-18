@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.8.0 (2026-11-18)
+
+### Changed
+- Posts are always ready to paste: no `[brackets]`. Invented details are written in plainly and every one is listed in the notes (`지어낸 부분: ...`).
+- `farmer` persona re-measured from 10 popular farming-board posts: 합니다체 is the base (not 해요체); posts open with 안녕하세요 or where and what the writer farms; asking with context is the most common post; most posts carry a photo; length runs from a one-line caption to a long essay; farming facts (products, ratios, distances, temperature ranges) are exact and hedged with 약, 정도, `~`; hedged sayings and well-wishes are allowed as closers.
+- Example posts were removed from `personas.md` and the Log shape, and outputs must never reuse an example's topic, wording, numbers, or line order. Posts were coming out as copies of the examples.
+
+### Added
+- `farm` roll pool for `farmer` (`plain` stays for `midlife`): `hapnida` and `hapnida_haeyo` registers, `oneline` and `essay` lengths, `greeting` and `intro` openers, `feeling` ending.
+- Ask, Photo caption, Essay, and Notice shapes for farming boards.
+- Conflicts 32 (banned openers and aphorisms vs farming boards) and 33 (rough voice vs precise farming facts).
+
 ## v1.7.0 (2026-11-18)
 
 ### Added

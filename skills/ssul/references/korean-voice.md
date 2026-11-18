@@ -9,8 +9,8 @@ Use this only when the user gave no samples of their own posts and no feed sampl
 | AI, dev, startup, investing, tech news, hot takes | **반말 혼잣말** | `~다`, `~함`, `~임`, `~네`, `~냐`, `~듯`, bare nouns | talking to yourself in public; attitude shows |
 | daily life, parenting, food, travel, pets | **해요체 구어** | `~거든요`, `~더라고요`, `~잖아요`, `~죠`, `~네요` | telling a friend |
 | brand or business accounts | **해요체 구어**, lighter on ㅋㅋ | same | friendly, not cute |
-| farming, rural life, farming communities (`farmer`) | **plain 해요체**, 합니다 mixed in | `~했어요`, `~했네요`, `~같아요`, `~합니다`, `~습니다`, repeated | writing to other farmers; practical, in order |
-| 40s and up, daily life (`midlife`) | **plain 해요체**, 합니다 mixed in | same as farming | a plain account, greetings allowed |
+| farming, rural life, farming communities (`farmer`) | **합니다체**, ~네요 or 해요체 lines mixed in | `~했습니다`, `~입니다`, `~궁금합니다`, `~부탁드립니다`, `~바랍니다`, `~네요`, repeated | writing to other farmers; practical, asking, often with a photo |
+| 40s and up, daily life (`midlife`) | 합니다체 and plain 해요체 | `~했습니다`, `~했어요`, `~네요` | a plain account, greetings allowed |
 
 반말 혼잣말 example (two lines is a full post):
 
@@ -87,9 +87,9 @@ Fix every hit. Severity: **S1** always fix, **S2** fix unless it is the user's o
 
 | Sev | Tell | Example | Fix |
 |---|---|---|---|
-| S1 | Invented specifics | a number, quote, or scene nobody gave you | real material or `[brackets]` |
+| S1 | Invented specifics | a number, quote, or scene nobody gave you | real material, or invented in plain text and listed in the notes |
 | S1 | Lesson ending | "결국 중요한 건 ~라는 걸 깨달았다" | end on the scene or the quote |
-| S1 | Aphorism ending | "농사는 하늘이 짓고 걱정은 사람이 짓는다" | cut it, or replace with what someone actually said |
+| S1 | Aphorism ending | "농사는 하늘이 짓고 걱정은 사람이 짓는다" | cut it, or replace with what someone actually said. Exception: `farmer` and `midlife` samples use hedged sayings and well-wishes (~는 말이 딱 맞는 것 같습니다, 좋은 하루 보내시길 바랍니다); allowed when the samples do it and the material leads there |
 | S1 | Hollow reversal | "이건 단순한 툴이 아닙니다. 방식의 변화입니다" | state the concrete change |
 | S1 | Chatbot residue | "좋은 질문입니다", "도움이 되셨길 바랍니다" | delete |
 | S2 | Rule of three | 무 뽑고 / 배추 묶고 / 고추 따고, three by reflex | keep the real count; often one vivid action is enough |
@@ -112,7 +112,7 @@ Every tell above is something to remove. These are the opposite: the post is cle
 
 | Sev | Tell | Example | Fix |
 |---|---|---|---|
-| S2 | Precision beyond the material | 오전 6시 47분, 영하 2.3도 when the user said "새벽", "영하" | the precision the material has, said the way the speaker says it |
+| S2 | Precision beyond the material | 오전 6시 47분, 영하 2.3도 when the user said "새벽", "영하" | the precision the material has, said the way the speaker says it. Farmers are exact about products, ratios, and distances; the tell is precision the material does not have, not precision itself |
 | S2 | Every beat connected | 근데 / 그래서 / 결국 between every line | the speaker's own joins, or none |
 | S2 | A turn the material lacks | an observation recast as a realization (근데 ~게 이제 확실해요) | tell what happened |
 | S2 | Evenly spread endings | each sentence ends differently | let the voice source's endings repeat |

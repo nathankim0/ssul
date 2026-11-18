@@ -5,7 +5,8 @@ Usage:
   python3 roll.py                 # one roll, "sns" pool
   python3 roll.py --n 5           # five rolls, one per post
   python3 roll.py --pool warm     # 2030 daily life, parenting, food
-  python3 roll.py --pool plain    # farmers, 40s and up (farmer, midlife personas)
+  python3 roll.py --pool farm     # farmers on a farming board (farmer persona)
+  python3 roll.py --pool plain    # 40s and up, daily life (midlife persona)
   python3 roll.py --seed 42       # reproducible
 
 Prints one line of JSON per roll. Standard library only.
@@ -37,7 +38,19 @@ POOLS = {
         "flow": {"turn": 45, "log": 55},
         "endings": {"mixed": 55, "repeat": 45},
     },
-    # farmers and readers in their 40s and up (farmer, midlife personas)
+    # farmers on a farming community board (farmer persona),
+    # measured from 10 popular board posts
+    "farm": {
+        "register": {"hapnida": 55, "hapnida_haeyo": 35, "haeyo_plain": 10},
+        "laugh": {"none": 80, "ㅎㅎ": 15, "^^": 5},
+        "ellipsis": {"none": 75, "...": 15, "..": 10},
+        "length": {"oneline": 15, "short": 40, "medium": 25, "long": 10, "essay": 10},
+        "opener": {"straight": 35, "greeting": 30, "intro": 20, "weather": 15},
+        "ending": {"question": 35, "stop": 30, "wish": 20, "feeling": 15},
+        "flow": {"log": 100},  # no added turn; essays wander on their own
+        "endings": {"repeat": 65, "mixed": 35},
+    },
+    # readers in their 40s and up, daily life (midlife persona)
     "plain": {
         "register": {"haeyo_plain": 45, "haeyo_hapnida": 35, "diary": 20},
         "laugh": {"none": 55, "ㅎㅎ": 20, "^^": 15, "ㅋㅋ": 10},

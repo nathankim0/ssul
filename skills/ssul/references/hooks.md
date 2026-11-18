@@ -2,7 +2,7 @@
 
 These formulas are for the `sns` persona. For `farmer`, `midlife`, and sample-matched voices whose posts do not open with hooks, start the way the samples start (a plain fact, the weather, a greeting, a question) and check only Late and Confusing (`personas.md`).
 
-Pick 3 candidates from different triggers, run the four killers (late, confusing, not mine, flat), keep the best. Fill every slot with real material. Korean wording below is written for Korean, not translated.
+Pick 3 candidates from different triggers, run the four killers (late, confusing, not mine, flat), keep the best. Fill every slot with real material. The `[slots]` are template notation only; the output never contains brackets. Korean wording below is written for Korean, not translated.
 
 ## Triggers
 
@@ -47,6 +47,8 @@ Pick 3 candidates from different triggers, run the four killers (late, confusing
 | Flat | 오늘 무를 뽑았어요 | 서리 온다고 밤새 무 뽑았는데 서리 안 왔어요 |
 
 ## Banned openers
+For `sns`. On farming boards (`farmer`), 안녕하세요 and where and what the writer farms are normal first lines (`personas.md`).
+
 - 인사, 자기소개, "오늘은 ~에 대해"
 - "여러분 그거 아세요?" with no named thing
 - "충격", "역대급", "미쳤다" without a fact behind it

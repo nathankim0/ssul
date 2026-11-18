@@ -12,7 +12,8 @@ python3 -I "<skill base directory>/scripts/roll.py" --n <posts> --pool <sns|warm
 
 - `sns`: AI, dev, startup, investing, hot takes, and when the voice source is a pasted SNS feed
 - `warm`: 2030 daily life, parenting, food
-- `plain`: the `farmer` and `midlife` personas (`personas.md`): farmers and readers in their 40s and up
+- `farm`: the `farmer` persona (`personas.md`): farmers on a farming community board
+- `plain`: the `midlife` persona: readers in their 40s and up
 
 Each line is one post's settings, for example:
 
@@ -24,13 +25,13 @@ Each line is one post's settings, for example:
 
 | Setting | Values |
 |---|---|
-| register | `banmal_monologue` (~함, ~임, ~네, ~듯), `banmal_talk` (~야, ~어??, ~더라, ~대), `haeyo` (~요, ~거든요, ~더라고요); `plain` pool: `haeyo_plain` (~했어요, ~네요, ~같아요, few 거든요 or 더라고요), `haeyo_hapnida` (해요체 lines with 합니다 or 습니다 lines in the same post), `diary` (~했다, ~했음, a log to yourself) |
-| laugh | `none` (about half of all rolls), `ㅋ`, `ㅋㅋ`, `ㅋㅋㅋ`, `ㅎㅎ`, `^^` (`plain` only): use it 0 to 2 times in the post, where something is actually funny, awkward, or friendly |
+| register | `banmal_monologue` (~함, ~임, ~네, ~듯), `banmal_talk` (~야, ~어??, ~더라, ~대), `haeyo` (~요, ~거든요, ~더라고요); `farm` and `plain` pools: `hapnida` (~했습니다, ~입니다, ~궁금합니다, ~바랍니다), `hapnida_haeyo` (합니다체 base with ~네요 or 해요체 lines), `haeyo_plain` (~했어요, ~네요, ~같아요), `haeyo_hapnida` (해요체 base with 합니다 lines), `diary` (~했다, ~했음, a log to yourself) |
+| laugh | `none` (about half of all rolls), `ㅋ`, `ㅋㅋ`, `ㅋㅋㅋ`, `ㅎㅎ`, `^^` (`farm` and `plain` only): use it 0 to 2 times in the post, where something is actually funny, awkward, or friendly |
 | ellipsis | `none`, `..`, `...`, `~~` (`plain` only): trailing-off marks, 0 to 3 times |
-| length | `short` (2 to 4 lines), `medium` (5 to 8), `long` (9 to 12, still under 500 characters) |
-| opener | `straight` (start with the content), `reaction` (아니, 하.., 와, 진짜; `plain`: 아이고, 휴..), `weather` (`plain` only: the weather or the day, as farmers start), `address` (follower or board address, only if the address option is on; otherwise treat as `straight`) |
-| ending | `question` (a real one), `reaction` (아니 이게 맞냐고, 흑흑; ㅋㅋㅋ only when laugh is not `none`), `stop` (the last fact, no wrap-up), `wish` (`plain` only: 비 좀 왔으면 좋겠네요), `greeting` (`plain` only: 다들 수고하셨어요, 감기 조심하세요) |
-| flow | `turn` (hook, beats joined by 근데 or 그래서, a last line worth quoting), `log` (things in the order they happened, no turn, stops where it stops); the `plain` pool always rolls `log` |
+| length | `oneline` (`farm` only: a photo caption, nouns or one sentence), `short` (2 to 4 lines), `medium` (5 to 8), `long` (9 to 12; under 500 characters on Threads), `essay` (`farm` only: 20 lines or more, board posts only, only when the material is that rich) |
+| opener | `straight` (start with the content), `reaction` (아니, 하.., 와, 진짜; `plain`: 아이고, 휴..), `weather` (`farm` and `plain`: the weather or the day), `greeting` (`farm`: 안녕하세요.), `intro` (`farm`: where and what the writer farms), `address` (follower or board address, only if the address option is on; otherwise treat as `straight`) |
+| ending | `question` (a real one), `reaction` (아니 이게 맞냐고, 흑흑; ㅋㅋㅋ only when laugh is not `none`), `stop` (the last fact, no wrap-up), `wish` (`farm` and `plain`: 비 좀 왔으면 좋겠습니다, 평안한 하루 보내시길 바랍니다!), `greeting` (`plain`: 다들 수고하셨어요), `feeling` (`farm`: a plain feeling about the work, 즐겁습니다, 다행입니다) |
+| flow | `turn` (hook, beats joined by 근데 or 그래서, a last line worth quoting), `log` (things in the order they happened, no turn, stops where it stops); the `farm` and `plain` pools always roll `log` |
 | endings | `repeat` (a few endings, the same one may run 3 or more times in a row), `mixed` (endings vary where speech varies; never spread so each is used once) |
 
 ## What overrides the roll

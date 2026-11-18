@@ -69,7 +69,7 @@ Register follows the voice source. `sns` keeps one register per post; `farmer` w
 python3 -I "<skill base directory>/scripts/roll.py" --n <posts> --pool <sns|warm|farm|plain>
 ```
 
-Pool by persona: `sns` -> `sns` (AI, dev, hot takes) or `warm` (2030 daily life); `farmer` -> `farm`; `midlife` -> `plain`. The roll picks register within the pool, laugh marks, trailing marks, length, opener, ending, flow (`turn` or `log`), and whether endings repeat. The user's explicit asks, their own voice profile, and tone fit (no ㅋㅋ on serious posts) override the roll. Put the roll in the notes; "다시 굴려" re-rolls.
+Pool by persona: `sns` -> `sns` (AI, dev, hot takes) or `warm` (2030 daily life); `farmer` -> `farm`; `midlife` -> `plain`. The roll picks register within the pool, laugh marks, trailing marks, length, opener, ending, flow (`turn` or `log`), and whether endings repeat. The `farm` pool also rolls the shape, a `topic_seed` (used only when the user gave no topic or a broad one like "11월 이야기"; pass `--month`), and the roughen settings for Step 6. The user's explicit asks, their own voice profile, and tone fit (no ㅋㅋ on serious posts) override the roll. Put the roll in the notes; "다시 굴려" re-rolls.
 
 **Follower address is an option.** Decide it from the request, in this order:
 
@@ -101,7 +101,7 @@ Choose by what the material has:
 - an attitude -> Hot take or One-liner
 - a day's work or a plain account, with no turn -> Log (the usual shape for `farmer` and `midlife`)
 
-Do not add a turn the material does not have. A Log with no twist is a complete post.
+Do not add a turn the material does not have. A Log with no twist is a complete post. With the `farm` pool, the rolled `shape` decides; do not swap it for Log.
 
 **Do not manufacture humor.** If nothing in the material is actually funny, do not build a punchline. Write the Finding or the attitude instead. Attitude (annoyance, cynicism, self-mockery) carries a post further than a forced joke. Shorter is usually better: a two-line post is a complete post.
 
@@ -140,7 +140,7 @@ Run all of these, in order, on every draft. Details in `references/korean-voice.
 4. **Value test**: what does a stranger get: a fact they can use, a feeling they recognize, or a real laugh? If none, change the shape or the material. Do not polish a post that gives nothing.
 5. **Korean AI tells**: lesson endings, `X가 아니라 Y다` with a vague Y, rule-of-three lists, 명사화 (`진행하다`, `공유드리다`), 번역투 (`당신`, `~하는 것은 중요합니다`), stacked adjectives, em dashes, curly quotes for emphasis, bold, middle dots (`·`), circled numbers (①), Unicode arrows (→; write `->`), emoji.
 6. **Spoken register**: no report words (따라서, 종합하면, 부각, 안착), at most one self-question. Endings follow the voice source and the roll: repetition is allowed, and endings spread so each is used once are an AI tell. Do not vary endings to vary them.
-7. **Too clean**: compare the draft to the voice source. Every pass above removes things; this one checks the other direction. If the draft is smoother, more precise, or more connected than the real posts (a turn they never make, numbers sharper than the material, perfect spacing they do not have, young endings in an older voice), roughen it to match. Persona tells: `references/personas.md`. Never invent typos or feelings.
+7. **Too clean**: compare the draft to the voice source. Every pass above removes things; this one checks the other direction. If the draft is smoother, more precise, or more connected than the real posts (a turn they never make, numbers sharper than the material, young endings in an older voice), fix it. Persona tells: `references/personas.md`. Then, for the `farm` and `plain` pools, pipe the post through `python3 -I "<skill base directory>/scripts/roughen.py" --roll '<that post's roll JSON>'`. Rewrite any line it flags as `stock:` on stderr (unless the words came from the user) and run it again. Output exactly what the script prints; do not re-tidy spacing, spelling, periods, or line breaks afterwards.
 8. **Platform**: 0 or 1 hashtag, no link in the first post (links go in the first reply, `references/threads.md`), no emoji unless the voice source's real posts use them, ends without engagement bait.
 9. **Disclosure**: if the user received anything for the post (money, product, discount, points, commission), the first part of the post says so in Korean, by Korean FTC rules (`references/disclosure.md`). If a product or service is recommended and you do not know, ask. Realistic AI people or images are labeled.
 10. **Meaning and spelling** (polish mode, and before any output): negation, conditions, limits (`만`, `까지`, `이내`), numbers, and the author's claims are unchanged; clear spelling and spacing errors are fixed without "correcting" intentional casual style (`references/polish.md`).

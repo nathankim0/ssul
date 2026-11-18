@@ -60,7 +60,7 @@ Rules:
 - Humor posts (병맛) can end on a real question or a plain reaction (ㅋㅋㅋ, 아니 이게 맞냐고) instead of a crafted punchline.
 - Not every post needs a hook formula or a last-line punch. Scene, Confession, and Question posts can simply tell what happened and ask.
 - Use texture the user's material supports. Do not fake feelings the user did not express.
-- Never inject fake typos. Keep the user's own typos and spacing when polishing unless they ask for proofreading.
+- Never inject random typos. Keep the user's own typos and spacing when polishing unless they ask for proofreading. The one exception is `roughen.py` for the `farm` and `plain` pools: loose spacing and a few habitual spellings that real older writers use (할려고, 오래동안), chosen by the roll, never in numbers, names, or negation.
 - The bans still hold: no emoji (unless the voice source uses them), no `·`, no ①, no →.
 
 ## Follower address

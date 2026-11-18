@@ -40,7 +40,7 @@ Measured from 10 popular posts on a farming community board (November 2026). Re-
 - **합니다체 is the base.** Most sentences end in ~습니다, ~입니다, ~합니다, ~궁금합니다, ~부탁드립니다, ~바랍니다. ~네요 shows up for a feeling or a small brag. A post written all in 해요체 (~했어요, ~하려고요) reads like a younger writer.
 - **Most posts carry a photo or video.** pointing at the attachment, naming the crop in the photo, or a caption of only nouns. Ask whether a photo goes with the post, and write to it.
 - **Asking is the most common reason to post.** Give the context a stranger needs to answer (region, crop, variety, tree age, what was already done, the forecast), then ask plainly. Asking experts or fellow farmers by name of role (전문가님, 선배님) is normal.
-- **Precise on farming, loose on spelling.** Chemical and fertilizer names, mix ratios, distances, and temperature ranges are exact; spacing is loose (units stuck to numbers, 조사 spaced off) and some words are misspelled. Mirror spacing habits that most samples share. Never invent misspellings.
+- **Precise on farming, loose on spelling.** Chemical and fertilizer names, mix ratios, distances, and temperature ranges are exact; spacing is loose (units stuck to numbers, 조사 spaced off) and some words are misspelled. `roughen.py` applies loose spacing and 1 to 3 habitual spellings by roll; beyond that, mirror habits that most samples share and never invent misspellings.
 - **Long posts wander, and that is the point.** An essay post moves from the work, to a memory, to a family member, to how-to tips, to the weather, to wishing students luck on an exam. 근데, 그래서, ~거든요, ~잖아요? all appear in long posts, spoken the way an older writer says them, not stacked in a short one.
 - **Sayings and wishes are allowed.** A hedged saying near the end (~한다는 말이 딱 맞는 것 같습니다) and a well-wish to readers (따뜻한 하루 보내시길 바랍니다!) are real habits here. Use them only when they fit the material.
 - **Selling your own produce is a normal post.** Your own product is not sponsorship; but if the user received anything from a third party for the post, `disclosure.md` still applies.
@@ -65,7 +65,9 @@ These are on top of `korean-voice.md#korean-ai-tells`. All are S1 for these pers
 | Fake precision | 오전 6시 47분, 영하 2.3도 | farming facts exact, the rest hedged with 약, 정도, `~` |
 | Vague farming | "약을 쳤어요" when a real post would name the product and the ratio | the real name and ratio from the material, or invented and listed in the notes |
 | No context in an ask | a question with no region, crop, or tree age | the context a stranger needs to answer |
-| Too clean | perfect spacing everywhere, no mid-sentence `?` | match the samples' habits |
+| Too clean | perfect spacing everywhere, no mid-sentence `?`, every line one tidy sentence | `roughen.py` with the roll, then the samples' habits |
+| Stock phrases | 허리가 뻐근, 다행입니다, 마음이 편합니다, 한 해 농사, 걱정했는데 ~ 다행, 제법, 이제야, 뿌듯 (the model's defaults; `roughen.py` flags them) | what this writer actually said, or a different concrete detail |
+| Same post every time | weather opener, the day's work, a sore back, relief | the rolled shape and topic seed; in a batch, different shapes, topics, openers, and closers |
 | Borrowed SNS words | 스친이들, 갓생, 킹받네, TMI, ㅋㅋㅋ | the community's own words |
 
 ## custom

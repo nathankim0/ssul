@@ -33,6 +33,9 @@ Each line is one post's settings, for example:
 | ending | `question` (a real one), `reaction` (아니 이게 맞냐고, 흑흑; ㅋㅋㅋ only when laugh is not `none`), `stop` (the last fact, no wrap-up), `wish` (`farm` and `plain`: 비 좀 왔으면 좋겠습니다, 평안한 하루 보내시길 바랍니다!), `greeting` (`plain`: 다들 수고하셨어요), `feeling` (`farm`: a plain feeling about the work, 즐겁습니다, 다행입니다) |
 | flow | `turn` (hook, beats joined by 근데 or 그래서, a last line worth quoting), `log` (things in the order they happened, no turn, stops where it stops); the `farm` and `plain` pools always roll `log` |
 | endings | `repeat` (a few endings, the same one may run 3 or more times in a row), `mixed` (endings vary where speech varies; never spread so each is used once) |
+| shape | `farm` only: `ask`, `log`, `caption` (forces `oneline`), `show` (a photo of a result plus a line or two), `essay` (forces `essay` length), `notice` (`formats.md`). In a batch, shapes do not repeat until all have been used |
+| topic_seed | `farm` only: a seasonal farming topic for `--month` (default: this month). Use it only when the user gave no topic or a broad one. In a batch, every post gets a different seed |
+| spacing, spelling, periods, lines | `farm` and `plain` only: settings for `roughen.py` (loose spacing like 약600m and 해보았습니다; 1 to 3 habitual spellings like 할려고, 오래동안; periods on all, some, or no lines; one line per sentence, one block, or uneven blank lines) |
 
 ## What overrides the roll
 

@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.9.0 (2026-11-18)
+
+### Added
+- `scripts/roughen.py`: roughens `farm` and `plain` posts by roll, with a real random generator: loose spacing (약600m, 해보았습니다, 농사중입니다), 1 to 3 habitual spellings (할려고, 오래동안, 볼께요, 있읍니다), periods on all, some, or no lines, and one line per sentence, one block, or uneven blank lines. Never touches numbers, names, or negation. Flags the model's stock phrases (허리가 뻐근, 다행입니다, 마음이 편합니다, 한 해 농사) on stderr.
+- `farm` pool now rolls `shape` (ask, log, caption, show, essay, notice), a seasonal `topic_seed` (`--month`), and the roughen settings. In a batch, shapes and topics do not repeat.
+- Show (자랑 글) shape. Conflict 34.
+
+### Changed
+- Farm posts kept coming out as one post (weather, the day's work, a sore back, relief) with perfect spacing. Shape and topic are now rolled instead of chosen by the model, and the output is exactly what `roughen.py` prints, with no re-tidying.
+
 ## v1.8.0 (2026-11-18)
 
 ### Changed

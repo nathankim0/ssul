@@ -211,7 +211,7 @@ npx skills add nathankim0/ssul
 ```text
 skills/ssul/SKILL.md              스킬 본문
 skills/ssul/references/
-  conflicts.md                    원본 스킬끼리 부딪히는 31가지와 정리 기준
+  conflicts.md                    원본 스킬끼리 부딪히는 34가지와 정리 기준
   hooks.md                        첫 줄 유형과 실패 패턴 (한국어로 새로 작성)
   korean-voice.md                 구어체 어미와 한국어 AI 티 (S1~S3)
   interview.md                    진짜 재료를 받는 질문
@@ -231,6 +231,7 @@ skills/ssul/references/
   variation.md                    랜덤 말투 설정과 우선순위
   personas.md                     sns, farmer, midlife, custom 페르소나
 skills/ssul/scripts/roll.py       말투 설정을 뽑는 스크립트 (표준 라이브러리만 사용)
+skills/ssul/scripts/roughen.py    농민, 중장년 글을 설정대로 거칠게 만드는 스크립트 (띄어쓰기, 표기, 마침표, 줄바꿈)
 .claude-plugin/                   Claude Code 플러그인, 마켓플레이스 매니페스트
 ```
 

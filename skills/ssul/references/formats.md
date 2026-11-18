@@ -69,6 +69,9 @@ The most common farming-board post. Context a stranger needs first (region, crop
 ## Photo caption (사진 글) (farming boards)
 The post is the photo; the text names it. One line of nouns naming the work in the photo, or the crop name plus 입니다 and one line of what the writer wants to know or show. Ask the user what the photo shows; never describe a photo you have not been told about.
 
+## Show (자랑 글) (farming boards)
+A photo of a result (a harvest, a tree in bloom, a finished job) plus one or two lines: what it is and one real detail, maybe a small ㅎㅎ. No lesson.
+
 ## Essay (긴 글) (farming boards)
 A long post that wanders: the work, a memory, family, how-to tips, the weather, a hedged saying, a wish for readers. Only when the user's material is that rich; never pad. Every memory and tip comes from the user.
 

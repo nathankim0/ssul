@@ -211,7 +211,7 @@ If you have not given enough real material, ssul asks up to three short question
 ```text
 skills/ssul/SKILL.md              the skill
 skills/ssul/references/
-  conflicts.md                    31 contradictions between source skills, and the rulings
+  conflicts.md                    34 contradictions between source skills, and the rulings
   hooks.md                        first-line triggers and killers, written in Korean
   korean-voice.md                 구어체 endings and Korean AI tells (S1 to S3)
   interview.md                    questions for getting real material
@@ -231,6 +231,7 @@ skills/ssul/references/
   variation.md                    random voice settings and what overrides them
   personas.md                     sns, farmer, midlife, and custom personas
 skills/ssul/scripts/roll.py       rolls the voice settings (standard library only)
+skills/ssul/scripts/roughen.py    roughens farm and older-reader posts by roll (spacing, spelling, periods, lines)
 .claude-plugin/                   Claude Code plugin and marketplace manifests
 ```
 

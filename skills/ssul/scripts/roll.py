@@ -25,12 +25,12 @@ SNS_DIMENSIONS = {
     "ending": {"question": 35, "reaction": 30, "stop": 35},
 }
 
-# Settings passed to roughen.py. Only rough pools have them.
+# How the post is typed. Only rough pools have them; the model writes them.
 ROUGH_DIMENSIONS = {
-    "spacing": {"loose": 65, "standard": 35},
-    "spelling": {"habitual": 45, "standard": 55},
-    "periods": {"all": 40, "some": 35, "none": 25},
-    "lines": {"per_sentence": 40, "block": 30, "gappy": 30},
+    "spacing": {"loose": 50, "cramped": 20, "standard": 30},
+    "spelling": {"habitual": 50, "standard": 50},
+    "periods": {"all": 35, "some": 30, "none": 20, "arae": 10, "glued": 5},
+    "lines": {"per_sentence": 30, "block": 20, "gappy": 25, "wrapped": 25},
 }
 
 POOLS = {
@@ -49,12 +49,13 @@ POOLS = {
         "endings": {"mixed": 55, "repeat": 45},
     },
     # farmers on a farming community board (farmer persona),
-    # measured from 10 popular board posts
+    # measured from 25 popular board posts
     "farm": {
-        "shape": {"ask": 35, "log": 20, "caption": 15, "show": 15, "essay": 8, "notice": 7},
-        "register": {"hapnida": 55, "hapnida_haeyo": 35, "haeyo_plain": 10},
-        "laugh": {"none": 80, "ㅎㅎ": 15, "^^": 5},
-        "ellipsis": {"none": 75, "...": 15, "..": 10},
+        "shape": {"ask": 26, "log": 10, "memo": 8, "diary": 9, "caption": 7, "show": 10,
+                  "share": 14, "warn": 6, "essay": 4, "notice": 6},
+        "register": {"hapnida": 40, "haeyo_plain": 30, "hapnida_haeyo": 20, "switch": 10},
+        "laugh": {"none": 70, "^^": 15, "ㅎㅎ": 12, "ㅋ": 3},
+        "ellipsis": {"none": 55, "...": 10, "......": 10, "~~": 10, "..": 10, "~~~~": 5},
         "length": {"short": 50, "medium": 35, "long": 15},
         "opener": {"straight": 35, "greeting": 30, "intro": 20, "weather": 15},
         "ending": {"question": 35, "stop": 30, "wish": 20, "feeling": 15},
@@ -90,6 +91,10 @@ FARM_TOPICS = {
                "농한기 교육", "내년 비료 계획", "묘목 주문", "눈 피해", "메주 쑤기", "농기계 정비",
                "택배 판매", "겨울 딸기"],
 }
+# Share (좋은 글) posts are about life, not crops.
+SHARE_TOPICS = ["이웃", "오랜 친구", "부부", "나이 듦", "만족", "감사", "기다림", "건강", "손주",
+                "고향", "부모님", "말 한마디", "욕심", "가을 들녘", "겨울 준비", "새벽", "밥 한 그릇"]
+
 SEASON_BY_MONTH = {
     1: ["winter"], 2: ["winter", "spring"], 3: ["spring"], 4: ["spring"], 5: ["spring", "summer"],
     6: ["summer"], 7: ["summer"], 8: ["summer", "autumn"], 9: ["autumn"], 10: ["autumn"],
@@ -102,13 +107,26 @@ def pick(rng, weights):
     return rng.choices(keys, weights=[weights[k] for k in keys], k=1)[0]
 
 
+# Some farm shapes come with their own register, length, and marks.
+SHAPE_RULES = {
+    "caption": {"length": "oneline", "deco": "none"},
+    "essay": {"length": "essay"},
+    "memo": {"register": "memo", "length": "short", "opener": "straight", "ending": "stop", "laugh": "none",
+             "deco": "none"},
+    "diary": {"register": "haera_diary", "opener": "straight", "ending": {"stop": 60, "wish": 40}},
+    "share": {"register": {"hapnida": 50, "haera_poem": 30, "hage_letter": 20},
+              "length": {"long": 50, "essay": 50}, "ending": "wish",
+              "deco": {"heavy": 45, "light": 40, "none": 15}},
+    "warn": {"ending": "wish"},
+}
+
+
 def roll_one(rng, pool):
     roll = {name: pick(rng, weights) for name, weights in pool.items()}
-    shape = roll.get("shape")
-    if shape == "caption":
-        roll["length"] = "oneline"
-    elif shape == "essay":
-        roll["length"] = "essay"
+    for key, value in SHAPE_RULES.get(roll.get("shape"), {}).items():
+        roll[key] = pick(rng, value) if isinstance(value, dict) else value
+    if "shape" in roll and "deco" not in roll:
+        roll["deco"] = pick(rng, {"none": 70, "light": 25, "heavy": 5})
     return roll
 
 
@@ -140,8 +158,10 @@ def main():
     if args.pool == "farm":
         month = args.month or datetime.date.today().month
         topics = sorted({t for s in SEASON_BY_MONTH[month] for t in FARM_TOPICS[s]})
-        for roll, topic in zip(rolls, rng.sample(topics, k=min(n, len(topics)))):
-            roll["topic_seed"] = topic
+        farm_seeds = iter(rng.sample(topics, k=min(n, len(topics))))
+        share_seeds = iter(rng.sample(SHARE_TOPICS, k=min(n, len(SHARE_TOPICS))))
+        for roll in rolls:
+            roll["topic_seed"] = next(share_seeds if roll["shape"] == "share" else farm_seeds, None)
 
     # In a batch of 3 or more, at least one post has no laugh at all.
     if len(rolls) >= 3 and all(r["laugh"] != "none" for r in rolls):

@@ -17,7 +17,7 @@ Run before returning any post. In audit mode, print each failed item with the ex
 - [ ] **Too clean.** Not smoother, more precise, or more connected than the voice source (`korean-voice.md#too-clean`, `personas.md`).
 - [ ] **Disclosure.** Anything received for the post is stated in the first part, in Korean, with approved wording (`disclosure.md`). AI people and realistic AI images are labeled.
 - [ ] **Meaning and spelling.** Negation, conditions, limits, numbers, and claims unchanged (polish); clear spelling and spacing errors fixed; intentional casual style kept.
-- [ ] **Platform.** Threads: under 500 characters; boards: length as the samples. Then 0 or 1 hashtag, no link in post 1, at most one question. No emoji (unless the voice source uses them), middle dots (`·`), circled numbers (①), or Unicode arrows (→; use `->`).
+- [ ] **Platform.** Threads: under 500 characters; boards: length as the samples. Then 0 or 1 hashtag, no link in post 1, at most one question. No emoji (unless the voice source uses them, or a `farm` post's `deco`), middle dots between words (`·`), circled numbers (①), or Unicode arrows (→; use `->`).
 - [ ] **Output.** Post first as paste-ready text, then at most 3 short notes, one of them listing every invented detail. Nothing published.
 - [ ] **No copying examples.** No topic, wording, number, or line order taken from an example in `references/`.
 

@@ -33,9 +33,11 @@ Each line is one post's settings, for example:
 | ending | `question` (a real one), `reaction` (아니 이게 맞냐고, 흑흑; ㅋㅋㅋ only when laugh is not `none`), `stop` (the last fact, no wrap-up), `wish` (`farm` and `plain`: 비 좀 왔으면 좋겠습니다, 평안한 하루 보내시길 바랍니다!), `greeting` (`plain`: 다들 수고하셨어요), `feeling` (`farm`: a plain feeling about the work, 즐겁습니다, 다행입니다) |
 | flow | `turn` (hook, beats joined by 근데 or 그래서, a last line worth quoting), `log` (things in the order they happened, no turn, stops where it stops); the `farm` and `plain` pools always roll `log` |
 | endings | `repeat` (a few endings, the same one may run 3 or more times in a row), `mixed` (endings vary where speech varies; never spread so each is used once) |
-| shape | `farm` only: `ask`, `log`, `caption` (forces `oneline`), `show` (a photo of a result plus a line or two), `essay` (forces `essay` length), `notice` (`formats.md`). In a batch, shapes do not repeat until all have been used |
-| topic_seed | `farm` only: a seasonal farming topic for `--month` (default: this month). Use it only when the user gave no topic or a broad one. In a batch, every post gets a different seed |
-| spacing, spelling, periods, lines | `farm` and `plain` only: settings for `roughen.py` (loose spacing like 약600m and 해보았습니다; 1 to 3 habitual spellings like 할려고, 오래동안; periods on all, some, or no lines; one line per sentence, one block, or uneven blank lines) |
+| shape | `farm` only: `ask`, `log`, `memo` (forces the `memo` register), `diary` (forces `haera_diary`), `caption` (forces `oneline`), `show`, `share` (a good-writing post; forces its own register, long length, a wish, and `deco`), `warn`, `essay`, `notice` (`formats.md`). In a batch, shapes do not repeat until all have been used |
+| register (farm extras) | `switch` (starts in 해요체 and slips into 반말 or 합니다), `memo` (nouns, ~있음, 끝.), `haera_diary` (~다, ~해야지), `haera_poem` (poem lines), `hage_letter` (~하게나, ~보세) |
+| deco | `farm` only: `none`, `light` (one or two touches), `heavy` (a decorated title, symbols between parts, a run of marks at the end). Which marks is the model's choice, different each post: ♡ ♥ ☆ ★ ♧ ※ ▶ ◇ ~~♡ !!! ^^* and emoji older writers use (🌼 🌸 🍎 🌾 💕 👍 🙏 😊). Never the same set twice in a batch |
+| topic_seed | `farm` only: a seasonal farming topic for `--month` (default: this month), or a life theme for `share`. Use it only when the user gave no topic or a broad one. In a batch, every post gets a different seed |
+| spacing, spelling, periods, lines | `farm` and `plain` only: how the post is typed; write it this way from the first draft, never clean first and dirtied later. spacing `loose` (약600m, 해보았습니다) or `cramped` (one or two sentences with almost no spaces); spelling `habitual` (1 to 3 of 할려고, 잇읍니다, 함니다, 몇일, 담주); periods `all`, `some`, `none`, `arae` (sentences end in ㆍ), `glued` (따도.따도.); lines `per_sentence`, `block`, `gappy`, `wrapped` (phone-width wraps, sometimes mid-word) |
 
 ## What overrides the roll
 

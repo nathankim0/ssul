@@ -60,7 +60,7 @@ Rules:
 - Humor posts (병맛) can end on a real question or a plain reaction (ㅋㅋㅋ, 아니 이게 맞냐고) instead of a crafted punchline.
 - Not every post needs a hook formula or a last-line punch. Scene, Confession, and Question posts can simply tell what happened and ask.
 - Use texture the user's material supports. Do not fake feelings the user did not express.
-- Never inject random typos. Keep the user's own typos and spacing when polishing unless they ask for proofreading. The one exception is `roughen.py` for the `farm` and `plain` pools: loose spacing and a few habitual spellings that real older writers use (할려고, 오래동안), chosen by the roll, never in numbers, names, or negation.
+- Never inject random typos. Keep the user's own typos and spacing when polishing unless they ask for proofreading. The one exception is the `farm` and `plain` pools: when the roll says so, write with the loose spacing and a few habitual spellings real older writers use (할려고, 오래동안), never in numbers, names, or negation.
 - The bans still hold: no emoji (unless the voice source uses them), no `·`, no ①, no →.
 
 ## Follower address
@@ -97,10 +97,10 @@ Fix every hit. Severity: **S1** always fix, **S2** fix unless it is the user's o
 | S2 | 번역투 | 당신, ~하는 것은 중요합니다, ~에 있어서 | rewrite as speech |
 | S2 | Stacked adjectives | 빠르고 신속하며 효율적인 | one fact instead |
 | S2 | Significance words | 핵심적인, 혁신적인, 게임체인저 | delete or replace with the fact |
-| S2 | Middle dot `·` between words | 기획·개발·운영, 중·하순 | a comma, 와/랑, or spell it out (중순에서 하순) |
+| S2 | Middle dot `·` between words | 기획·개발·운영, 중·하순 | a comma, 와/랑, or spell it out (중순에서 하순). `ㆍ` (U+318D) as a sentence end in `farm` posts is a phone-keyboard habit, not this tell |
 | S2 | Circled numbers | ①②③ | `1.` `2.` `3.` or no numbering |
 | S2 | Unicode arrows | → ⇒ ➡ | `->`, or words (그래서, 다음에) |
-| S2 | Emoji | ✅ 🔥 👉 📌 | none |
+| S2 | Emoji | ✅ 🔥 👉 📌 | none (`farm` posts may use marks and emoji as the roll's `deco` says) |
 | S3 | Em dash, en dash | — | period or comma |
 | S3 | Curly quotes or single quotes for emphasis | '진짜' | remove the quotes |
 | S3 | Bold, headers, bullets in a casual post | | plain lines |

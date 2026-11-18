@@ -69,6 +69,18 @@ The most common farming-board post. Context a stranger needs first (region, crop
 ## Photo caption (사진 글) (farming boards)
 The post is the photo; the text names it. One line of nouns naming the work in the photo, or the crop name plus 입니다 and one line of what the writer wants to know or show. Ask the user what the photo shows; never describe a photo you have not been told about.
 
+## Memo (영농 메모) (farming boards)
+A farm diary entry in nouns and 음슴체: date, weather, each job in a few words, maybe `*` before each item, maybe 끝. No greeting, no feeling, no question.
+
+## Diary (일기) (farming boards)
+해라체 to oneself: what the writer saw in the field, small pleasures, what to do next (준비해야지). May have a short title. Wanders; no point to make.
+
+## Warn (조심 글) (farming boards)
+Something that happened to the writer (a tick bite, a fall, a sting, a machine accident), plainly, then a wish that members stay safe (회원님들 건강 챙기세요). Never invent a diagnosis or a medical claim beyond what the user said.
+
+## Share (좋은 글) (farming boards)
+A reflection on life, not crops, ending in a blessing for readers. 합니다체, poem lines, or a 하게체 letter; decoration as the roll's `deco` says (the model picks the marks and emoji). A literary voice is the genre here. Sayings, 고사, and poems are welcome once their source is confirmed by web search (or given by the user) and named in the post; a modern poem or essay is quoted only a few lines. Source URLs go in the notes. Nothing confirmed -> the writer's own reflection.
+
 ## Show (자랑 글) (farming boards)
 A photo of a result (a harvest, a tree in bloom, a finished job) plus one or two lines: what it is and one real detail, maybe a small ㅎㅎ. No lesson.
 

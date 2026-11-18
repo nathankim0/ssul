@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.10.0 (2026-11-18)
+
+### Added
+- `farmer` re-measured from 25 popular farming-board posts. New shapes: Memo (영농 메모, nouns and 음슴체), Diary (해라체), Warn (a mishap and a wish that members stay safe), and Share (좋은 글, a reflection on life with a blessing).
+- `farm` pool: shapes now set their own register (`memo`, `haera_diary`, `haera_poem`, `hage_letter`, and `switch` for posts that slip between registers), and a `deco` setting (`none`, `light`, `heavy`; the model picks which marks and emoji, different each post). Share posts get a life theme as their topic seed.
+- New typing settings in the roll: `cramped` spacing (one or two sentences with almost no spaces), `arae` periods (sentences end in ㆍ), `glued` periods (따도.따도.), `wrapped` lines (phone-width wraps, sometimes mid-word), and more habitual spellings (잇읍니다, 함니다, 하였음니다, 무우, 담주, 넘).
+- Conflicts 35 (good-writing posts vs aphorism bans) and 36 (`ㆍ` vs the middle-dot ban).
+
+### Removed
+- `scripts/roughen.py`. Posts are no longer roughened by a script. The roll still sets spacing, spelling, periods, and line breaks, and the model writes the post that way from the first draft.
+
+### Changed
+- `farm` register mix is wider: 합니다체 for questions, plain 해요체 for short reports and brags, with switching allowed.
+- Share posts may use sayings, 고사, and poems once the source is confirmed by web search (or given by the user) and named in the post, with the URL in the notes. Modern poems and essays are quoted only a few lines. Unconfirmed sources are not used.
+
 ## v1.9.0 (2026-11-18)
 
 ### Added

@@ -69,7 +69,7 @@ Register follows the voice source. `sns` keeps one register per post; `farmer` w
 python3 -I "<skill base directory>/scripts/roll.py" --n <posts> --pool <sns|warm|farm|plain>
 ```
 
-Pool by persona: `sns` -> `sns` (AI, dev, hot takes) or `warm` (2030 daily life); `farmer` -> `farm`; `midlife` -> `plain`. The roll picks register within the pool, laugh marks, trailing marks, length, opener, ending, flow (`turn` or `log`), and whether endings repeat. The `farm` pool also rolls the shape, a `topic_seed` (used only when the user gave no topic or a broad one like "11월 이야기"; pass `--month`), and the roughen settings for Step 6. The user's explicit asks, their own voice profile, and tone fit (no ㅋㅋ on serious posts) override the roll. Put the roll in the notes; "다시 굴려" re-rolls.
+Pool by persona: `sns` -> `sns` (AI, dev, hot takes) or `warm` (2030 daily life); `farmer` -> `farm`; `midlife` -> `plain`. The roll picks register within the pool, laugh marks, trailing marks, length, opener, ending, flow (`turn` or `log`), and whether endings repeat. The `farm` pool also rolls the shape, a `topic_seed` (used only when the user gave no topic or a broad one like "11월 이야기"; pass `--month`), and how the post is typed (spacing, spelling, periods, lines, deco). The user's explicit asks, their own voice profile, and tone fit (no ㅋㅋ on serious posts) override the roll. Put the roll in the notes; "다시 굴려" re-rolls.
 
 **Follower address is an option.** Decide it from the request, in this order:
 
@@ -92,7 +92,7 @@ When the address is removed, rewrite the opening so it still reads naturally; do
 | **Finding** (발견) | the user tried something and learned facts others can use | saves, reposts |
 | **Hot take** (한마디) | the user has an attitude about a trend: 짜증, 냉소, 자조 | replies, quotes |
 | **Log** (일지) | what the user did today, in order: weather, work, crop or body, a wish or an ask | replies, likes |
-| **Ask, Photo caption, Essay, Notice** | farming boards: a question with context, a caption for the attached photo, a long wandering post, selling the user's own produce (`references/formats.md`) | replies |
+| **Farming-board shapes** | Ask, Memo, Diary, Photo caption, Show, Share (좋은 글), Warn, Essay, Notice; rolled by the `farm` pool (`references/formats.md`) | replies |
 
 Choose by what the material has:
 
@@ -134,13 +134,13 @@ Keep the one that passes all four. A first-person line is fine when the moment i
 
 Run all of these, in order, on every draft. Details in `references/korean-voice.md` and `references/checklist.md`.
 
-1. **Truth**: every number, name, quote, and event is real or listed in the notes as invented. No brackets in the post.
+1. **Truth**: every number, name, quote, and event is real or listed in the notes as invented. No brackets in the post. A quote, saying, or poem credited to someone is checked by web search first and its source named (`references/personas.md`).
 2. **Stranger test**: someone with zero context understands every line. Replace insider words ("윤문 스킬", project names, inside jokes) with plain words. If you need the conversation to understand the post, it fails.
 3. **Weight test**: does it read like a report? Cut setup, lists that are not lists, explanations of the joke, and the moral at the end.
 4. **Value test**: what does a stranger get: a fact they can use, a feeling they recognize, or a real laugh? If none, change the shape or the material. Do not polish a post that gives nothing.
 5. **Korean AI tells**: lesson endings, `X가 아니라 Y다` with a vague Y, rule-of-three lists, 명사화 (`진행하다`, `공유드리다`), 번역투 (`당신`, `~하는 것은 중요합니다`), stacked adjectives, em dashes, curly quotes for emphasis, bold, middle dots (`·`), circled numbers (①), Unicode arrows (→; write `->`), emoji.
 6. **Spoken register**: no report words (따라서, 종합하면, 부각, 안착), at most one self-question. Endings follow the voice source and the roll: repetition is allowed, and endings spread so each is used once are an AI tell. Do not vary endings to vary them.
-7. **Too clean**: compare the draft to the voice source. Every pass above removes things; this one checks the other direction. If the draft is smoother, more precise, or more connected than the real posts (a turn they never make, numbers sharper than the material, young endings in an older voice), fix it. Persona tells: `references/personas.md`. Then, for the `farm` and `plain` pools, pipe the post through `python3 -I "<skill base directory>/scripts/roughen.py" --roll '<that post's roll JSON>'`. Rewrite any line it flags as `stock:` on stderr (unless the words came from the user) and run it again. Output exactly what the script prints; do not re-tidy spacing, spelling, periods, or line breaks afterwards.
+7. **Too clean**: compare the draft to the voice source. Every pass above removes things; this one checks the other direction. If the draft is smoother, more precise, or more connected than the real posts (a turn they never make, numbers sharper than the material, young endings in an older voice), fix it. Persona tells: `references/personas.md`. For the `farm` and `plain` pools, write the post typed the way the roll says from the first draft (spacing, habitual spellings, periods, line breaks, deco), as a real older writer types on a phone; do not write it clean and dirty it later, and do not tidy it in any later pass. Replace the persona's stock phrases unless the user said them.
 8. **Platform**: 0 or 1 hashtag, no link in the first post (links go in the first reply, `references/threads.md`), no emoji unless the voice source's real posts use them, ends without engagement bait.
 9. **Disclosure**: if the user received anything for the post (money, product, discount, points, commission), the first part of the post says so in Korean, by Korean FTC rules (`references/disclosure.md`). If a product or service is recommended and you do not know, ask. Realistic AI people or images are labeled.
 10. **Meaning and spelling** (polish mode, and before any output): negation, conditions, limits (`만`, `까지`, `이내`), numbers, and the author's claims are unchanged; clear spelling and spacing errors are fixed without "correcting" intentional casual style (`references/polish.md`).
